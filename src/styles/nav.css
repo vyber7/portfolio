@@ -1,0 +1,16 @@
+nav {
+  background-color: rgb(136, 51, 136);
+  color: #3b3934;
+  position: fixed;
+  bottom: 30px;
+  left: 35%;
+  right: 35%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+a {
+  color: var(--color-duodenary);
+  display: inline-block;
+}

@@ -1,4 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #000;
-  color: #f0f0f0;
+  font-family: "Cascadia Code", "Space Grotesk", -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  text-align: center;
+  margin: auto;
+  background: var(--color-bg);
+  /*background-image: url("./assets/blue_grunge_pattern_background.jpg");*/
+  line-height: 1.7;
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("./assets/CascadiaCode.ttf");
+}
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-tertiary: #ff0000;
+  --color-quaternary: #00ff00;
+  --color-quinary: #0000ff;
+  --color-senary: #ffff00;
+  --color-septenary: #00ffff;
+  --color-octonary: #ff00ff;
+  --color-novenary: #ff8000;
+  --color-bg: #0080ff;
+  --color-undenary: #8000ff;
+  --color-duodenary: #ff0080;
+  --color-tridenary: #0080ff;
+  --color-quattuordenary: #ff0080;
+  --color-quindenary: #ff8000;
+  --color-sedenary: #0080ff;
+  --color-septendenary: #ff0080;
+  --color-octodenary: #ff8000;
+  --color-novendenary: #0080ff;
+  --color-vigintenary: #ff0080;
+
+  --container-width-lg: 75%;
+  --container-width-md: 90%;
+  --container-width-sm: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
