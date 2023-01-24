@@ -1,16 +1,22 @@
 nav {
-  background-color: rgb(136, 51, 136);
-  color: #3b3934;
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
-  bottom: 30px;
-  left: 35%;
-  right: 35%;
+
+  bottom: 2rem;
+  padding: 0.7rem 1.7rem;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  gap: 1rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(20px);
 }
 
-a {
+nav a {
   color: var(--color-duodenary);
   display: inline-block;
+  cursor: pointer;
 }

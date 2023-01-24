@@ -24,6 +24,13 @@ body {
   line-height: 1.7;
 }
 
+header,
+footer,
+section {
+  padding: 1rem;
+  height: 100vh;
+}
+
 @font-face {
   font-family: "Cascadia Code";
   src: url("./assets/CascadiaCode.ttf");
@@ -58,4 +65,9 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+#root {
+  max-width: 1000px;
+  margin: auto;
 }

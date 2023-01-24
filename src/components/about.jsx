@@ -1,7 +1,7 @@
 import "../styles/about.css";
 
 function About() {
-  return <div id="about">about</div>;
+  return <section id="about">about</section>;
 }
 
 export default About;
