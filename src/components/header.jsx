@@ -1,6 +1,6 @@
 import "../styles/header.css";
 import CTA from "./CTA";
-import ME from "../assets/me.jpg";
+import ME from "../assets/me.png";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 
