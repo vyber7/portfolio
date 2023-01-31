@@ -2,7 +2,7 @@ header {
   height: 100vh;
   /*background: url("../images/header.jpg") no-repeat center center/cover;*/
   padding-top: 7rem;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .header__container {
@@ -21,17 +21,13 @@ header {
 .me {
   border-radius: 200px 200px 0 0;
   /*padding: 5rem 1.5rem 1.5rem 1.5rem;*/
-  margin-top: 7rem;
-  background: var(--color-primary);
+  margin-top: 6rem;
+  background: linear-gradient(var(--color-primary), transparent);
   width: 22rem;
-  height: 30rem;
-  position: absolute;
-  left: calc(50% - 11rem);
-  overflow: hidden;
-}
 
-img {
-  border-radius: 200px 200px 0 0;
+  position: absolute;
+
+  left: calc(50% - 11rem);
 }
 
 .header__socials {
@@ -40,7 +36,7 @@ img {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  left: 3rem;
+
   bottom: 3rem;
 }
 
@@ -54,7 +50,7 @@ img {
 .scroll_down {
   position: absolute;
   bottom: 5rem;
-  right: 0;
+  right: -2rem;
   transform: rotate(90deg);
   font-size: 0.9rem;
 }
@@ -62,17 +58,41 @@ img {
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   header {
-    height: 70vh;
+    padding-top: 3rem;
   }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 830px;
+    padding-top: 2rem;
   }
   .header__socials,
   .scroll_down {
     display: none;
+  }
+  .me {
+    width: 18rem;
+    left: calc(50% - 9rem);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .me {
+    width: 14rem;
+    left: calc(50% - 7rem);
+  }
+}
+/*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
+@media screen and (max-height: 830px) {
+  header {
+    height: 830px;
+  }
+  .header__socials {
+    bottom: 0;
+  }
+  .scroll_down {
+    bottom: 2.1rem;
   }
 }
