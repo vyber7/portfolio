@@ -1,4 +1,5 @@
 import CV from "../assets/cv.png";
+import { Link } from "react-scroll";
 
 function CTA() {
   return (
@@ -6,9 +7,9 @@ function CTA() {
       <a href={CV} download className="btn">
         Download CV
       </a>
-      <a href="#contact" className="btn btn-primary">
+      <Link to="contact" className="btn btn-primary">
         Messege me
-      </a>
+      </Link>
     </div>
   );
 }
