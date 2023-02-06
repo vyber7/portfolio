@@ -1,4 +1,48 @@
-#experience {
-  background-color: #a407c4;
-  color: #000;
+.experience__container {
+  /*display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.experience__card {
+  background: var(--color-bg-variant);
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.experience__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.experience__card h3 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1rem;
+}
+
+.experience__details {
+  display: flex;
+  gap: 1rem;
+}
+
+.experience__details div {
+  text-align: left;
+}
+
+.experience__details-icon {
+  color: var(--color-primary);
+  margin-top: 6px;
 }
