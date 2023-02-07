@@ -42,8 +42,6 @@ h1 {
 }
 
 section {
-  padding: 1rem;
-  height: 100vh;
   margin-top: 8rem;
 }
 
@@ -114,7 +112,7 @@ img {
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
-  --container-width-sm: 100%;
+  --container-width-sm: 95%;
 
   --transition: all 400ms ease;
 }

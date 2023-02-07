@@ -46,3 +46,37 @@
   color: var(--color-primary);
   margin-top: 6px;
 }
+
+/*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+  .experience__card {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+  }
+
+  .experience__card {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .experience__content {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__details {
+    justify-content: center;
+  }
+}
