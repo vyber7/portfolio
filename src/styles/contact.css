@@ -1,5 +1,65 @@
 #contact {
-  background-color: rgb(48, 165, 2);
-  color: #081802;
-  height: 100vh;
+  height: 50vh;
+}
+
+.contact__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 7rem;
+}
+
+.contact__option {
+  background: var(--color-bg-variant);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  margin: 0 0 1rem 0;
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.contact__option h5 {
+  margin-bottom: 0.4rem;
+}
+
+.contact__option a {
+  font-size: 0.8rem;
+  display: block;
+  width: 150px;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--color-primary);
+}
+
+::-webkit-input-placeholder {
+  color: var(--color-primary-variant);
 }

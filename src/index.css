@@ -104,7 +104,7 @@ img {
 
 :root {
   --color-primary: #4db5ff;
-  --color-primary-variant: #rgba(77, 181, 255, 0.4);
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #ffffff;
   --color-light: #f5f5f593;
   --color-bg: #1f1f38;

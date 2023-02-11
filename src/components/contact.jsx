@@ -12,7 +12,7 @@ function Contact() {
           <article className="contact__option">
             <MdOutlineEmail />
             <h4>Email</h4>
-            <h5>vb_2.0@pm.me</h5>
+            <h5 className="text-light">vb_2.0@pm.me</h5>
             <a href="mailto:vb_2.0@pm.me" target="_blank" rel="noreferrer">
               Send a message
             </a>
@@ -20,7 +20,7 @@ function Contact() {
           <article className="contact__option">
             <BsWhatsapp />
             <h4>WhatsApp</h4>
-            <h5>305-335-0473</h5>
+            <h5 className="text-light">305-335-0473</h5>
             <a
               href="https://api.whatsapp.com/send?phone=+13053350473"
               target="_blank"
