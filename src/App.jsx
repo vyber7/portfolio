@@ -4,7 +4,7 @@ import Experience from "./components/experience";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Nav from "./components/nav";
-import Services from "./components/services";
+import Projects from "./components/projects";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <About />
       <Experience />
-      <Services />
+      <Projects />
       <Contact />
       <Footer />
       <Nav />
