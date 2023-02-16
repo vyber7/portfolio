@@ -55,6 +55,14 @@ header {
   header {
     padding-top: 3rem;
   }
+
+  .header__socials {
+    left: 4rem;
+  }
+
+  .scroll_down {
+    right: 2rem;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
