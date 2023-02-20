@@ -27,10 +27,10 @@ function Footer() {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://github.com/vyber7">
+        <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
           <SiGithub />
         </a>
-        <a href="https://github.com/vyber7">
+        <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
           <SiLinkedin />
         </a>
       </div>

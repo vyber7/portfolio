@@ -16,10 +16,10 @@ function Header() {
           <img src={ME} alt="me" />
         </div>
         <div className="header__socials">
-          <a href="https://github.com/vyber7">
+          <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
             <SiGithub />
           </a>
-          <a href="https://linkedin.com/">
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
             <SiLinkedin />
           </a>
         </div>
