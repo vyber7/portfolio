@@ -3,6 +3,7 @@ footer {
   text-align: center;
   margin-top: 8rem;
   padding: 3rem 2rem 8rem;
+  border-radius: 2rem 2rem 0 0;
 }
 
 footer a {
