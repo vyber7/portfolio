@@ -24,39 +24,6 @@ function About() {
           <a href="#contact" className="btn btn-primary">
             Let's Talk
           </a>
-          {/*<a href="https://www.freecodecamp.org/certification/vyber7/responsive-web-design">
-            Resposive Web Design
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/javascript-algorithms-and-data-structures">
-            JavaScript Algorithms and Data Structures
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/front-end-development-libraries">
-            Front End Development Libraries
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/data-visualization">
-            Data Visualization
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/back-end-development-and-apis">
-            Back End Development and APIs
-          </a>*/}
-        </div>
-        <div>
-          <h2>Certifications</h2>
-          <a href="https://www.freecodecamp.org/certification/vyber7/responsive-web-design">
-            Resposive Web Design
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/javascript-algorithms-and-data-structures">
-            JavaScript Algorithms and Data Structures
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/front-end-development-libraries">
-            Front End Development Libraries
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/data-visualization">
-            Data Visualization
-          </a>
-          <a href="https://www.freecodecamp.org/certification/vyber7/back-end-development-and-apis">
-            Back End Development and APIs
-          </a>
         </div>
       </div>
     </section>

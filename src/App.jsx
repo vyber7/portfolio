@@ -5,12 +5,14 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Nav from "./components/nav";
 import Projects from "./components/projects";
+import Certs from "./components/certifications";
 
 const App = () => {
   return (
     <>
       <Header />
       <About />
+      <Certs />
       <Experience />
       <Projects />
       <Contact />
