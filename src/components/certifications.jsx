@@ -1,5 +1,38 @@
 import React from "react";
 import "../styles/certifications.css";
+import ResponsiveWebDesign from "../assets/responsive_web_design.png";
+import JSAlgorithmsAndDataStructures from "../assets/js_algorithms_and_data_structures.png";
+import FrontEndDevelopmentLibraries from "../assets/front_end_development_libraries.png";
+import DataVisualization from "../assets/data_visualization.png";
+import BackEndDevelopmentAndAPIs from "../assets/back_end_development_and_apis.png";
+
+const data = [
+  {
+    title: "Responsive Web Design",
+    img: ResponsiveWebDesign,
+    demo: "https://www.freecodecamp.org/certification/vyber7/responsive-web-design",
+  },
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    img: JSAlgorithmsAndDataStructures,
+    demo: "https://www.freecodecamp.org/certification/vyber7/javascript-algorithms-and-data-structures",
+  },
+  {
+    title: "Front End Development Libraries",
+    img: FrontEndDevelopmentLibraries,
+    demo: "https://www.freecodecamp.org/certification/vyber7/front-end-development-libraries",
+  },
+  {
+    title: "Data Visualization",
+    img: DataVisualization,
+    demo: "https://www.freecodecamp.org/certification/vyber7/data-visualization",
+  },
+  {
+    title: "Back End Development and APIs",
+    img: BackEndDevelopmentAndAPIs,
+    demo: "https://www.freecodecamp.org/certification/vyber7/back-end-development-and-apis",
+  },
+];
 
 function Certs() {
   return (
@@ -8,43 +41,16 @@ function Certs() {
       <h2>Certifications</h2>
 
       <div className="container certifications__container">
-        <div className="certifications__content">
-          <a
-            href="https://www.freecodecamp.org/certification/vyber7/responsive-web-design"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Resposive Web Design
-          </a>
-          <a
-            href="https://www.freecodecamp.org/certification/vyber7/javascript-algorithms-and-data-structures"
-            target="_blank"
-            rel="noreferrer"
-          >
-            JavaScript Algorithms and Data Structures
-          </a>
-          <a
-            href="https://www.freecodecamp.org/certification/vyber7/front-end-development-libraries"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Front End Development Libraries
-          </a>
-          <a
-            href="https://www.freecodecamp.org/certification/vyber7/data-visualization"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Data Visualization
-          </a>
-          <a
-            href="https://www.freecodecamp.org/certification/vyber7/back-end-development-and-apis"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Back End Development and APIs
-          </a>
-        </div>
+        {data.map((item) => {
+          return (
+            <article className="certifications__item">
+              <a href={item.demo} target="_blank" rel="noreferrer">
+                <img src={item.img} alt="img"></img>
+                <h3>{item.title}</h3>
+              </a>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
