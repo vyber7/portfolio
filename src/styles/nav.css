@@ -12,6 +12,7 @@ nav {
   gap: 0.5rem;
   border-radius: 3rem;
   backdrop-filter: blur(20px);
+  z-index: 100;
 }
 
 nav a {

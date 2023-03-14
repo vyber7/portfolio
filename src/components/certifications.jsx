@@ -5,6 +5,8 @@ import JSAlgorithmsAndDataStructures from "../assets/js_algorithms_and_data_stru
 import FrontEndDevelopmentLibraries from "../assets/front_end_development_libraries.png";
 import DataVisualization from "../assets/data_visualization.png";
 import BackEndDevelopmentAndAPIs from "../assets/back_end_development_and_apis.png";
+import { register } from "swiper/element/bundle";
+register();
 
 const data = [
   {
@@ -40,18 +42,25 @@ function Certs() {
       <h5>My Certifications</h5>
       <h2>Certifications</h2>
 
-      <div className="container certifications__container">
+      <swiper-container
+        pagination="true"
+        slides-per-view="1"
+        speed="400"
+        space-between="100"
+        loop="true"
+        class="container certifications__container"
+      >
         {data.map((item) => {
           return (
-            <article className="certifications__item">
+            <swiper-slide class="certifications__item">
               <a href={item.demo} target="_blank" rel="noreferrer">
                 <img src={item.img} alt="img"></img>
                 <h3>{item.title}</h3>
               </a>
-            </article>
+            </swiper-slide>
           );
         })}
-      </div>
+      </swiper-container>
     </section>
   );
 }
