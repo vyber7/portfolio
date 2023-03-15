@@ -1,4 +1,5 @@
 .certifications__container {
+  width: 50%;
   padding-bottom: 3rem;
 }
 
@@ -19,16 +20,8 @@
   color: var(--color-white);
 }
 
-/*TOFIX SWIPER PAGINATION BULLET COLOR*/
-.swiper-pagination-clickable .swiper-pagination-bullet {
-  background-color: red;
-}
-
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
-  .certifications__container {
-    width: 72%;
-  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/

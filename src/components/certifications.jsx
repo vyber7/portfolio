@@ -55,7 +55,6 @@ function Certs() {
             <swiper-slide class="certifications__item">
               <a href={item.demo} target="_blank" rel="noreferrer">
                 <img src={item.img} alt="img"></img>
-                <h3>{item.title}</h3>
               </a>
             </swiper-slide>
           );

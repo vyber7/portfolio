@@ -115,6 +115,9 @@ img {
   --container-width-sm: 95%;
 
   --transition: all 400ms ease;
+
+  --swiper-pagination-color: #4db5ff;
+  --swiper-navigation-color: #4db5ff;
 }
 
 ::-webkit-scrollbar {
