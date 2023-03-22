@@ -15,11 +15,17 @@ function About() {
         </div>
         <div className="about__content">
           <p>
-            I am a full stack developer with a passion for creating beautiful,
-            responsive, and functional websites. I am a graduate of the
-            International Science and Technology University with a Bachelor's
-            Degree in Computer Science. I am always looking to learn new
-            technologies and improve my skills.
+            <p>
+              I am a full stack developer with a passion for creating beautiful,
+              responsive, and functional websites. I am a graduate of the
+              International Science and Technology University with a Bachelor's
+              Degree in Computer Science.
+            </p>
+            <p>
+              I am a quick learner and I am always looking for new challenges. I
+              am a team player and I am always willing to help others. I am a
+              hard worker and I am always looking for ways to improve my skills.
+            </p>
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk

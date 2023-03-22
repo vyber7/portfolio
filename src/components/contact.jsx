@@ -1,6 +1,6 @@
 import "../styles/contact.css";
-import { MdOutlineEmail } from "react-icons/md";
-import { BsWhatsapp } from "react-icons/bs";
+//import { MdOutlineEmail } from "react-icons/md";
+//import { BsWhatsapp } from "react-icons/bs";
 
 function Contact() {
   return (
@@ -8,7 +8,7 @@ function Contact() {
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
       <div className="container contact__container">
-        <div className="contact__options">
+        {/*<div className="contact__options">
           <article className="contact__option">
             <MdOutlineEmail />
             <h4>Email</h4>
@@ -29,7 +29,7 @@ function Contact() {
               Send a message
             </a>
           </article>
-        </div>
+  </div>*/}
 
         <form action="">
           <input type="text" placeholder="Name" name="name" required />

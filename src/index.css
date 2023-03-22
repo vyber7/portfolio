@@ -127,6 +127,7 @@ img {
 #root {
   max-width: 1000px;
   margin: auto;
+  /*border: 1px solid red;*/
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/

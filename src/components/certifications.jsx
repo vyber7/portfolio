@@ -6,6 +6,7 @@ import FrontEndDevelopmentLibraries from "../assets/front_end_development_librar
 import DataVisualization from "../assets/data_visualization.png";
 import BackEndDevelopmentAndAPIs from "../assets/back_end_development_and_apis.png";
 import { register } from "swiper/element/bundle";
+//import Swiper from "swiper/bundle";
 register();
 
 const data = [
@@ -48,13 +49,16 @@ function Certs() {
         speed="400"
         space-between="100"
         loop="true"
+        autoplay="true"
+        disable-on-interaction="false"
         class="container certifications__container"
       >
         {data.map((item) => {
           return (
             <swiper-slide class="certifications__item">
+              <img src={item.img} alt="img"></img>
               <a href={item.demo} target="_blank" rel="noreferrer">
-                <img src={item.img} alt="img"></img>
+                <h3>{item.title}</h3>
               </a>
             </swiper-slide>
           );
