@@ -39,6 +39,7 @@ h5 {
 }
 h1 {
   font-size: 2.5rem;
+  padding: 1rem 0 1rem;
 }
 
 section {
@@ -103,12 +104,12 @@ img {
 }
 
 :root {
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary: #fc7307;
+  --color-primary-variant: #236ab9;
   --color-white: #ffffff;
-  --color-light: #f5f5f593;
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
+  --color-light: #d4e4f7;
+  --color-bg: #341c09;
+  --color-bg-variant: #b85b14;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
@@ -116,8 +117,8 @@ img {
 
   --transition: all 400ms ease;
 
-  --swiper-pagination-color: #4db5ff;
-  --swiper-navigation-color: #4db5ff;
+  --swiper-pagination-color: #fc7307;
+  --swiper-navigation-color: #fc7307;
 }
 
 ::-webkit-scrollbar {

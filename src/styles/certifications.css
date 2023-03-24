@@ -23,18 +23,19 @@
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   .certifications__container {
-    width: 72%;
+    width: 30rem;
   }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 690px) {
-  .certifications__item a h3 {
-    display: none;
-  }
 }
 @media screen and (max-width: 600px) {
   .certifications__container {
     width: 100%;
+  }
+
+  .certifications__item a h3 {
+    display: none;
   }
 }

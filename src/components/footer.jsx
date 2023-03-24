@@ -1,6 +1,7 @@
 import "../styles/footer.css";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
+import { SiCodepen } from "react-icons/si";
 import { Link } from "react-scroll";
 
 function Footer() {
@@ -29,6 +30,9 @@ function Footer() {
       <div className="footer__socials">
         <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
           <SiGithub />
+        </a>
+        <a href="https://codepen.io/vyber7" target="_blank" rel="noreferrer">
+          <SiCodepen />
         </a>
         <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
           <SiLinkedin />

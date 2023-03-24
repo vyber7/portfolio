@@ -16,7 +16,7 @@ const data = [
     demo: "https://www.freecodecamp.org/certification/vyber7/responsive-web-design",
   },
   {
-    title: "JavaScript Algorithms and Data Structures",
+    title: "JS Algorithms and Data Structures",
     img: JSAlgorithmsAndDataStructures,
     demo: "https://www.freecodecamp.org/certification/vyber7/javascript-algorithms-and-data-structures",
   },

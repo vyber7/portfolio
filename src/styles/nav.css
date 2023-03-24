@@ -1,3 +1,52 @@
+/*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
+@media screen and (max-width: 1024px) {
+  nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 2rem;
+    padding: 0.7rem 1.7rem;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(20px);
+    z-index: 100;
+  }
+
+  nav a {
+    cursor: pointer;
+    background: transparent;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    color: var(--color-light);
+    width: 3.5rem;
+  }
+
+  nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  nav a.active {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+/*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
+@media screen and (max-height: 830px) {
+}
+/*
 nav {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -33,3 +82,4 @@ nav a.active {
   background: var(--color-primary);
   color: var(--color-bg);
 }
+*/
