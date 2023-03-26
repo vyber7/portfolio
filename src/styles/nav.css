@@ -14,6 +14,11 @@ nav {
   border-radius: 0 0 3rem 3rem;
   backdrop-filter: blur(20px);
   z-index: 100;
+  transition: var(--transition);
+}
+
+nav.hidden {
+  top: -110px;
 }
 
 nav a {
@@ -23,7 +28,6 @@ nav a {
   font-size: 1.1rem;
   border-radius: 50%;
   color: var(--color-light);
-  width: 3.5rem;
 }
 
 nav a:hover {
@@ -34,6 +38,11 @@ nav a.active {
   background: var(--color-primary);
   color: var(--color-bg);
 }
+
+nav a svg {
+  display: none;
+}
+
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   nav {
@@ -62,6 +71,19 @@ nav a.active {
   nav a.active {
     background: var(--color-primary);
     color: var(--color-bg);
+  }
+
+  nav a svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav a span {
+    display: none;
+  }
+
+  nav.hidden {
+    top: auto;
   }
 }
 

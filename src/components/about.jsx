@@ -1,5 +1,6 @@
 import "../styles/about.css";
 import ME from "../assets/about_me.jpg";
+import { Link } from "react-scroll";
 
 function About() {
   return (
@@ -27,9 +28,9 @@ function About() {
               hard worker and I am always looking for ways to improve my skills.
             </p>
           </p>
-          <a href="#contact" className="btn btn-primary">
+          <Link to="contact" className="btn btn-primary">
             Let's Talk
-          </a>
+          </Link>
         </div>
       </div>
     </section>

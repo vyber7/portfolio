@@ -9,6 +9,25 @@ import { useState } from "react";
 
 function Nav() {
   const [active, setActive] = useState("#header");
+
+  // Hide navbar on scroll down and show on scroll up
+  // Only works on desktop
+  let screenWidth = window.innerWidth;
+  console.log(screenWidth);
+  if (screenWidth > 1024) {
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        document.querySelector("nav").classList.remove("hidden");
+      } else {
+        document.querySelector("nav").classList.add("hidden");
+      }
+      prevScrollPos = currentScrollPos;
+    };
+  }
+
   return (
     <nav className="container">
       <Link
@@ -16,35 +35,35 @@ function Nav() {
         onClick={() => setActive("#header")}
         className={active === "#header" ? "active" : ""}
       >
-        <AiOutlineHome />
+        <AiOutlineHome /> <span>Home</span>
       </Link>
       <Link
         to="about"
         onClick={() => setActive("#about")}
         className={active === "#about" ? "active" : ""}
       >
-        <AiOutlineUser />
+        <AiOutlineUser /> <span>About</span>
       </Link>
       <Link
         to="experience"
         onClick={() => setActive("#experience")}
         className={active === "#experience" ? "active" : ""}
       >
-        <BiBook />
+        <BiBook /> <span>Experience</span>
       </Link>
       <Link
         to="projects"
         onClick={() => setActive("#projects")}
         className={active === "#projects" ? "active" : ""}
       >
-        <RiServiceLine />
+        <RiServiceLine /> <span>Projects</span>
       </Link>
       <Link
         to="contact"
         onClick={() => setActive("#contact")}
         className={active === "#contact" ? "active" : ""}
       >
-        <BiMessageSquareDots />
+        <BiMessageSquareDots /> <span>Contact</span>
       </Link>
     </nav>
   );
