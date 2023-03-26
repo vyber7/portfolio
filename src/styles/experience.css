@@ -22,9 +22,14 @@
   cursor: default;
 }
 
-.experience__card h3 {
+.experience__card:hover h3 {
   color: var(--color-primary);
+}
+
+.experience__card h3 {
+  color: var(--color-bg);
   margin-bottom: 2rem;
+  transition: var(--transition);
 }
 
 .experience__content {

@@ -41,7 +41,7 @@ function Contact() {
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+            Send
           </button>
         </form>
       </div>

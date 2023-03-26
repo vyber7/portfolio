@@ -159,9 +159,9 @@ header {
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   header {
+    align-items: flex-start;
     padding-top: 3rem;
   }
-
   .header__container {
     grid-template-columns: 1fr;
     grid-gap: 5rem;
@@ -184,7 +184,7 @@ header {
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 600px) {
   header {
-    padding-top: 0;
+    padding-top: 2rem;
   }
   .header__socials a {
     font-size: 1.5rem;

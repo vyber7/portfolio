@@ -10,7 +10,7 @@ import { useState } from "react";
 function Nav() {
   const [active, setActive] = useState("#header");
   return (
-    <nav>
+    <nav className="container">
       <Link
         to="header"
         onClick={() => setActive("#header")}
