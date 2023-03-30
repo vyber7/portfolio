@@ -58,6 +58,10 @@ footer a {
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
+@media screen and (max-width: 800px) {
   .footer__copyright::after {
     content: "";
     display: block;
@@ -68,11 +72,10 @@ footer a {
   }
 
   footer {
-    padding-bottom: 8rem;
+    padding-bottom: 7rem;
   }
 }
 
-/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 600px) {
   .permalinks {
     flex-direction: column;

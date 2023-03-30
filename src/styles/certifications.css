@@ -4,7 +4,7 @@
 }
 
 .certifications__item {
-  background-color: var(--color-bg-variant);
+  background-color: var(--color-primary);
   padding: 1.2rem;
   border-radius: 2rem;
   border: 1px solid transparent;

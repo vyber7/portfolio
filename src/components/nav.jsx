@@ -13,7 +13,7 @@ function Nav() {
   // Hide navbar on scroll down and show on scroll up
   // Only works on desktop
   let screenWidth = window.innerWidth;
-  console.log(screenWidth);
+
   if (screenWidth > 1024) {
     let prevScrollPos = window.pageYOffset;
 
@@ -29,42 +29,44 @@ function Nav() {
   }
 
   return (
-    <nav className="container">
-      <Link
-        to="header"
-        onClick={() => setActive("#header")}
-        className={active === "#header" ? "active" : ""}
-      >
-        <AiOutlineHome /> <span>Home</span>
-      </Link>
-      <Link
-        to="about"
-        onClick={() => setActive("#about")}
-        className={active === "#about" ? "active" : ""}
-      >
-        <AiOutlineUser /> <span>About</span>
-      </Link>
-      <Link
-        to="experience"
-        onClick={() => setActive("#experience")}
-        className={active === "#experience" ? "active" : ""}
-      >
-        <BiBook /> <span>Experience</span>
-      </Link>
-      <Link
-        to="projects"
-        onClick={() => setActive("#projects")}
-        className={active === "#projects" ? "active" : ""}
-      >
-        <RiServiceLine /> <span>Projects</span>
-      </Link>
-      <Link
-        to="contact"
-        onClick={() => setActive("#contact")}
-        className={active === "#contact" ? "active" : ""}
-      >
-        <BiMessageSquareDots /> <span>Contact</span>
-      </Link>
+    <nav id="nav">
+      <div className="container nav__container">
+        <Link
+          to="header"
+          onClick={() => setActive("#header")}
+          className={active === "#header" ? "active" : ""}
+        >
+          <AiOutlineHome /> <span>Home</span>
+        </Link>
+        <Link
+          to="about"
+          onClick={() => setActive("#about")}
+          className={active === "#about" ? "active" : ""}
+        >
+          <AiOutlineUser /> <span>About</span>
+        </Link>
+        <Link
+          to="experience"
+          onClick={() => setActive("#experience")}
+          className={active === "#experience" ? "active" : ""}
+        >
+          <BiBook /> <span>Experience</span>
+        </Link>
+        <Link
+          to="projects"
+          onClick={() => setActive("#projects")}
+          className={active === "#projects" ? "active" : ""}
+        >
+          <RiServiceLine /> <span>Projects</span>
+        </Link>
+        <Link
+          to="contact"
+          onClick={() => setActive("#contact")}
+          className={active === "#contact" ? "active" : ""}
+        >
+          <BiMessageSquareDots /> <span>Contact</span>
+        </Link>
+      </div>
     </nav>
   );
 }

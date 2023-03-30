@@ -44,7 +44,7 @@ p {
   }
 
   .about__me {
-    width: 50%;
+    width: 20rem;
     margin: 2rem auto 4rem;
   }
 
@@ -60,7 +60,7 @@ p {
   }
 
   .about__me {
-    width: 65%;
+    width: 18rem;
     margin: 0 auto 3rem;
   }
 
@@ -70,5 +70,11 @@ p {
 
   .about__content p {
     margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__me {
+    width: 14rem;
   }
 }

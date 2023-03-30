@@ -10,7 +10,7 @@
 }
 
 .experience__card {
-  background: var(--color-bg-variant);
+  background: var(--color-primary);
   border-radius: 2rem;
   padding: 2rem 3rem;
   border: 1px solid transparent;
@@ -48,7 +48,7 @@
 }
 
 .experience__details-icon {
-  color: var(--color-primary);
+  color: var(--color-primary-variant);
   margin-top: 6px;
 }
 

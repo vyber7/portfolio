@@ -2,22 +2,24 @@ nav {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
-  padding: 0.7rem 1.7rem;
-  width: 1000px;
-  max-width: 1000px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  gap: 0.5rem;
-  border-radius: 0 0 3rem 3rem;
+  left: 0;
+  width: 100%;
   backdrop-filter: blur(20px);
   z-index: 100;
   transition: var(--transition);
 }
 
-nav.hidden {
+.nav__container {
+  padding: 0.7rem 1.7rem;
+  width: 1000px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.hidden {
   top: -110px;
 }
 
@@ -26,7 +28,7 @@ nav a {
   background: transparent;
   padding: 0.8rem;
   font-size: 1.1rem;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   color: var(--color-light);
 }
 
@@ -45,37 +47,32 @@ nav a svg {
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
+}
+
+/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
+@media screen and (max-width: 800px) {
   nav {
-    background-color: rgba(0, 0, 0, 0.3);
     top: auto;
     bottom: 2rem;
-    padding: 0.7rem 1.7rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: fit-content;
     border-radius: 3rem;
   }
 
+  .nav__container {
+    width: 370px;
+    gap: 1rem;
+  }
+
   nav a {
-    cursor: pointer;
-    background: transparent;
-    padding: 0.8rem;
-    font-size: 1.1rem;
-    border-radius: 50%;
-    color: var(--color-light);
+    border-radius: 1.5rem;
     width: 3.5rem;
-  }
-
-  nav a:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
-  nav a.active {
-    background: var(--color-primary);
-    color: var(--color-bg);
   }
 
   nav a svg {
     display: block;
-    margin: 0 auto;
+    margin: auto;
   }
 
   nav a span {
@@ -87,49 +84,8 @@ nav a svg {
   }
 }
 
-/*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
-@media screen and (max-width: 600px) {
-}
-
 @media screen and (max-width: 400px) {
 }
 /*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
 @media screen and (max-height: 830px) {
 }
-/*
-nav {
-  background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  bottom: 2rem;
-  padding: 0.7rem 1.7rem;
-  width: fit-content;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  gap: 0.5rem;
-  border-radius: 3rem;
-  backdrop-filter: blur(20px);
-  z-index: 100;
-}
-
-nav a {
-  cursor: pointer;
-  background: transparent;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-  border-radius: 50%;
-  color: var(--color-light);
-  width: 3.5rem;
-}
-
-nav a:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-nav a.active {
-  background: var(--color-primary);
-  color: var(--color-bg);
-}
-*/

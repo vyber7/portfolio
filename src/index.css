@@ -74,7 +74,7 @@ a:hover {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: var(--color-primary);
+  color: var(--color-light);
   font-weight: 500;
   transition: var(--transition);
   cursor: pointer;
@@ -104,12 +104,12 @@ img {
 }
 
 :root {
-  --color-primary: #fc7307;
-  --color-primary-variant: #236ab9;
-  --color-white: #ffffff;
-  --color-light: #d4e4f7;
-  --color-bg: #341c09;
-  --color-bg-variant: #b85b14;
+  --color-primary: #268de0;
+  --color-primary-variant: #1ee1f7;
+  --color-white: #feefe7;
+  --color-bg: #3c1ced;
+  --color-light: #19ffc2;
+  --color-bg-variant: #1e49f7;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
@@ -117,8 +117,8 @@ img {
 
   --transition: all 400ms ease;
 
-  --swiper-pagination-color: #fc7307;
-  --swiper-navigation-color: #fc7307;
+  --swiper-pagination-color: #268de0;
+  --swiper-navigation-color: #268de0;
 }
 
 ::-webkit-scrollbar {
