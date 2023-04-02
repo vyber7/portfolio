@@ -42,14 +42,10 @@ h1 {
   padding: 1rem 0 1rem;
 }
 
-section {
-  margin-top: 8rem;
-}
-
 section > h2,
 section > h5 {
   text-align: center;
-  color: var(--color-light);
+  color: var(--color-primary-variant);
 }
 
 section > h2 {
@@ -64,6 +60,7 @@ section > h2 {
 a {
   color: var(--color-primary);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 a:hover {
@@ -74,11 +71,11 @@ a:hover {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: var(--color-light);
+  color: var(--color-primary-variant);
   font-weight: 500;
   transition: var(--transition);
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-primary-variant);
 }
 
 .btn:hover {
@@ -88,7 +85,7 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: var(--color-primary-variant);
   color: var(--color-bg);
 }
 
@@ -105,13 +102,13 @@ img {
 
 :root {
   --color-primary: #268de0;
-  --color-primary-variant: #1ee1f7;
+  --color-primary-variant: #f75b1e;
   --color-white: #feefe7;
-  --color-bg: #3c1ced;
   --color-light: #19ffc2;
-  --color-bg-variant: #1e49f7;
+  --color-bg: #080b0a;
+  --color-bg-variant: #233133;
 
-  --container-width-lg: 80%;
+  --container-width-lg: 100%;
   --container-width-md: 90%;
   --container-width-sm: 95%;
 
@@ -126,9 +123,7 @@ img {
 }
 
 #root {
-  max-width: 1000px;
   margin: auto;
-  /*border: 1px solid red;*/
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/

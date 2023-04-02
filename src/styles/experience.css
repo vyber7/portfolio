@@ -1,16 +1,17 @@
+#experience {
+  padding: 10rem 0;
+  background: var(--color-bg-variant);
+}
+
 .experience__container {
-  /*display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-}*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+  width: 1000px;
 }
 
 .experience__card {
-  background: var(--color-primary);
+  background: var(--color-bg);
   border-radius: 2rem;
   padding: 2rem 3rem;
   border: 1px solid transparent;
@@ -22,12 +23,8 @@
   cursor: default;
 }
 
-.experience__card:hover h3 {
-  color: var(--color-primary);
-}
-
 .experience__card h3 {
-  color: var(--color-bg);
+  color: var(--color-primary);
   margin-bottom: 2rem;
   transition: var(--transition);
 }

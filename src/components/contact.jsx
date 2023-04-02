@@ -8,29 +8,6 @@ function Contact() {
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
       <div className="container contact__container">
-        {/*<div className="contact__options">
-          <article className="contact__option">
-            <MdOutlineEmail />
-            <h4>Email</h4>
-            <h5 className="text-light">vb_2.0@pm.me</h5>
-            <a href="mailto:vb_2.0@pm.me" target="_blank" rel="noreferrer">
-              Send a message
-            </a>
-          </article>
-          <article className="contact__option">
-            <BsWhatsapp />
-            <h4>WhatsApp</h4>
-            <h5 className="text-light">305-335-0473</h5>
-            <a
-              href="https://api.whatsapp.com/send?phone=+13053350473"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send a message
-            </a>
-          </article>
-  </div>*/}
-
         <form action="">
           <input type="text" placeholder="Name" name="name" required />
           <input type="email" placeholder="Email" name="email" required />

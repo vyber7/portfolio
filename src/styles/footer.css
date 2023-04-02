@@ -1,14 +1,7 @@
 footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-bg);
   text-align: center;
-  margin-top: 8rem;
   padding: 3rem 2rem;
-  border-radius: 2rem 2rem 0 0;
-}
-
-footer a {
-  color: var(--color-bg);
-  cursor: pointer;
 }
 
 .footer__logo {
@@ -19,6 +12,7 @@ footer a {
   background: var(--color-primary-variant);
   padding: 0.5rem 1rem;
   border-radius: 50%;
+  color: var(--color-bg);
 }
 
 .permalinks {
@@ -39,17 +33,18 @@ footer a {
 
 .footer__socials a {
   background: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-primary);
   padding: 0.8rem;
   border-radius: 0.5rem;
   transition: var(--transition);
   border: 1px solid transparent;
+  font-size: 1.5rem;
 }
 
 .footer__socials a:hover {
   background: transparent;
-  color: var(--color-bg);
-  border-color: var(--color-bg);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .footer__copyright {

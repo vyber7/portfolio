@@ -56,8 +56,8 @@ function Certs() {
         {data.map((item) => {
           return (
             <swiper-slide class="certifications__item">
-              <img src={item.img} alt="img"></img>
               <a href={item.demo} target="_blank" rel="noreferrer">
+                <img src={item.img} alt="img"></img>
                 <h3>{item.title}</h3>
               </a>
             </swiper-slide>

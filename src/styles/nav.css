@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(8, 11, 10, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,11 +10,11 @@ nav {
 }
 
 .nav__container {
-  padding: 0.7rem 1.7rem;
+  padding: 0.7rem 0;
   width: 1000px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 0.5rem;
   align-items: center;
 }

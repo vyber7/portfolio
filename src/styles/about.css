@@ -1,7 +1,14 @@
+#about {
+  padding: 10rem 0;
+  background: var(--color-bg-variant);
+  width: 100%;
+}
+
 .about__container {
   display: grid;
   grid-template-columns: 35% 50%;
   grid-gap: 15%;
+  width: 1000px;
 }
 
 .about__me {

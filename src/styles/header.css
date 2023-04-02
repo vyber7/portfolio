@@ -8,19 +8,20 @@ header {
 
 .header__container {
   display: grid;
-  grid-template-columns: 45% 50%;
+  grid-template-columns: 55% 40%;
   grid-gap: 5%;
   align-items: top;
   justify-content: center;
+  width: 1000px;
 }
 
 .intro {
-  text-align: right;
+  text-align: left;
 }
 
 .cta {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 1rem;
   margin-top: 2.5rem;
 }
@@ -33,15 +34,16 @@ header {
 }
 
 .header__socials {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding-top: 1rem;
 }
 
 .header__socials a {
-  color: var(--color-primary);
+  color: var(--color-primary-variant);
 
   border-radius: 0.5rem;
   transition: var(--transition);

@@ -1,9 +1,15 @@
+#contact {
+  padding: 10rem 0;
+  background: var(--color-bg-variant);
+}
+
 .contact__container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 7rem;
+  width: 1000px;
 }
 
 .contact__option {
@@ -45,15 +51,15 @@ form textarea {
   width: 100%;
   padding: 1rem 1.5rem;
   background: transparent;
-  border: 1px solid var(--color-bg-variant);
+  border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
-  color: var(--color-white);
+  color: var(--color-primary-variant);
   resize: none;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: var(--color-white);
+  border-color: var(--color-primary-variant);
 }
 
 ::-webkit-input-placeholder {

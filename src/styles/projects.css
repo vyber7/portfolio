@@ -1,11 +1,16 @@
+#projects {
+  padding: 10rem 0;
+}
+
 .projects__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  width: 1000px;
 }
 
 .projects__item {
-  background-color: var(--color-primary);
+  background-color: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 2rem;
   border: 1px solid transparent;
