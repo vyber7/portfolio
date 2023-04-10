@@ -34,7 +34,7 @@ function Footer() {
         <a href="https://codepen.io/vyber7" target="_blank" rel="noreferrer">
           <SiCodepen />
         </a>
-        <a href="https://github.com/vyber7" target="_blank" rel="noreferrer">
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
           <SiLinkedin />
         </a>
       </div>

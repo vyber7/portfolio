@@ -43,20 +43,17 @@ header {
 }
 
 .header__socials a {
-  color: var(--color-primary-variant);
-
-  border-radius: 0.5rem;
+  color: var(--color-primary);
   transition: var(--transition);
-
   font-size: 2rem;
-}
-
-.header__socials a:hover {
-  color: var(--color-white);
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
+  .header__container {
+    grid-gap: 0.5rem;
+  }
+
   .me {
     width: 20rem;
     margin: 0 auto;

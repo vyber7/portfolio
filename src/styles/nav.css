@@ -29,7 +29,6 @@ nav a {
   padding: 0.8rem;
   font-size: 1.1rem;
   border-radius: 0.5rem;
-  color: var(--color-light);
 }
 
 nav a:hover {
@@ -37,8 +36,8 @@ nav a:hover {
 }
 
 nav a.active {
-  background: var(--color-primary);
-  color: var(--color-bg);
+  border: 2px solid var(--color-primary-variant);
+  color: var(--color-primary);
 }
 
 nav a svg {
@@ -53,11 +52,11 @@ nav a svg {
 @media screen and (max-width: 800px) {
   nav {
     top: auto;
-    bottom: 2rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
-    border-radius: 3rem;
+    border-radius: 1rem 1rem 0 0;
   }
 
   .nav__container {
@@ -66,7 +65,7 @@ nav a svg {
   }
 
   nav a {
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     width: 3.5rem;
   }
 

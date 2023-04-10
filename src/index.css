@@ -42,15 +42,28 @@ h1 {
   padding: 1rem 0 1rem;
 }
 
-section > h2,
-section > h5 {
-  text-align: center;
-  color: var(--color-primary-variant);
+.title {
+  width: 1000px;
+  border-bottom: 2px solid var(--color-primary-variant);
+  margin: 0 auto 5rem;
 }
 
-section > h2 {
+.title > h2,
+.title > h5 {
+  color: var(--color-primary-variant);
+  text-align: left;
+}
+
+.title > h2 {
   color: var(--color-primary);
-  margin-bottom: 3rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.title svg {
+  width: 30px;
+  height: 30px;
+  margin: 3px 10px 0 0;
 }
 
 .text-light {
@@ -64,7 +77,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-white);
+  color: var(--color-primary-variant);
 }
 
 .btn {

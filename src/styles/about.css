@@ -4,6 +4,12 @@
   width: 100%;
 }
 
+.title {
+  width: 1000px;
+
+  margin: 0 auto 5rem;
+}
+
 .about__container {
   display: grid;
   grid-template-columns: 35% 50%;
