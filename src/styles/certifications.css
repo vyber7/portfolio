@@ -1,7 +1,3 @@
-#certifications {
-  padding: 10rem 0;
-}
-
 .certifications__container {
   width: 35rem;
   padding-bottom: 3rem;
@@ -17,7 +13,6 @@
 
 .certifications__item:hover {
   border-color: var(--color-primary-variant);
-  background: transparent;
 }
 
 .certifications__item a {

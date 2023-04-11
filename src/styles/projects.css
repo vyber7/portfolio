@@ -1,7 +1,3 @@
-#projects {
-  padding: 10rem 0;
-}
-
 .projects__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,7 +15,7 @@
 
 .projects__item:hover {
   border-color: var(--color-primary-variant);
-  background: transparent;
+  scale: 1.05;
 }
 
 .projects__item-img {
@@ -40,6 +36,10 @@
     gap: 1.2rem;
     width: 72%;
   }
+
+  .projects__item:hover {
+    scale: 1.03;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
@@ -48,6 +48,10 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     width: 100%;
+  }
+
+  .projects__item:hover {
+    scale: 1;
   }
 }
 

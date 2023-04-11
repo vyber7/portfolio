@@ -19,6 +19,10 @@ header {
   text-align: left;
 }
 
+.intro h5:last-of-type {
+  color: var(--color-primary);
+}
+
 .cta {
   display: flex;
   justify-content: flex-start;

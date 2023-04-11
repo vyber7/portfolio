@@ -1,13 +1,6 @@
 #about {
-  padding: 10rem 0;
   background: var(--color-bg-variant);
   width: 100%;
-}
-
-.title {
-  width: 1000px;
-
-  margin: 0 auto 5rem;
 }
 
 .about__container {
@@ -21,31 +14,24 @@
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 2rem;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    var(--color-primary),
-    transparent
-  );
 }
 
 .about__me-img {
   border-radius: 2rem;
   overflow: hidden;
-  transform: rotate(10deg);
   transition: var(--transition);
 }
 
 .about__me-img:hover {
-  transform: rotate(0deg);
+  transform: scale(1.07);
 }
+
 .about__content {
   text-align: left;
 }
 
 p {
   margin: 0 0 2.6rem;
-  color: var(--color-light);
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/

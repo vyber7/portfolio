@@ -6,7 +6,7 @@ function About() {
   return (
     <section id="about">
       <div className="title">
-        <h5>Get To Know</h5>
+        <h5>Get To Know Me</h5>
         <h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"

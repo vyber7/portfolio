@@ -1,5 +1,4 @@
 #experience {
-  padding: 10rem 0;
   background: var(--color-bg-variant);
 }
 
@@ -17,10 +16,11 @@
   border: 1px solid transparent;
   transition: var(--transition);
 }
+
 .experience__card:hover {
-  background: transparent;
   border-color: var(--color-primary-variant);
   cursor: default;
+  scale: 1.07;
 }
 
 .experience__card h3 {
@@ -58,6 +58,10 @@
     width: 80%;
     margin: 0 auto;
   }
+
+  .experience__card:hover {
+    scale: 1.05;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
@@ -69,14 +73,20 @@
   .experience__card {
     width: 100%;
   }
+
+  .experience__card:hover {
+    scale: 1;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .experience__content {
     grid-template-columns: 1fr;
+    margin: auto;
+    width: 50%;
   }
 
   .experience__details {
-    justify-content: center;
+    justify-content: left;
   }
 }
