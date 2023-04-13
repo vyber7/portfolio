@@ -1,5 +1,6 @@
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+// Render the App component to the DOM
+ReactDOM.createRoot(document.querySelector("#root")).render(<App />);

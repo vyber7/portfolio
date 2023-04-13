@@ -71,9 +71,9 @@ function Certs() {
         disable-on-interaction="false"
         class="container certifications__container"
       >
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
-            <swiper-slide class="certifications__item">
+            <swiper-slide class="certifications__item" key={i}>
               <a href={item.demo} target="_blank" rel="noreferrer">
                 <img src={item.img} alt="img"></img>
                 <h3>{item.title}</h3>

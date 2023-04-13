@@ -33,7 +33,7 @@ function About() {
           </div>
         </div>
         <div className="about__content">
-          <p>
+          <div>
             <p>
               I am a full stack developer with a passion for creating beautiful,
               responsive, and functional websites. I am a graduate of the
@@ -45,7 +45,7 @@ function About() {
               am a team player and I am always willing to help others. I am a
               hard worker and I am always looking for ways to improve my skills.
             </p>
-          </p>
+          </div>
           <Link to="contact" className="btn btn-primary">
             Let's Talk
           </Link>

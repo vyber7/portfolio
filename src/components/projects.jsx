@@ -64,9 +64,9 @@ function Projects() {
       </div>
 
       <div className="container projects__container">
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
-            <article className="projects__item">
+            <article className="projects__item" key={i}>
               <div className="projects__item-img">
                 <img src={item.img} alt="img"></img>
               </div>

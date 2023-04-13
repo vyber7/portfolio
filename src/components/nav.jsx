@@ -5,28 +5,69 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Nav() {
   const [active, setActive] = useState("#header");
 
   // Hide navbar on scroll down and show on scroll up
-  // Only works on desktop
-  let screenWidth = window.innerWidth;
+  let prevScrollPos = window.pageYOffset;
 
-  if (screenWidth > 1024) {
-    let prevScrollPos = window.pageYOffset;
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      document.querySelector("nav").classList.remove("hidden");
+    } else {
+      document.querySelector("nav").classList.add("hidden");
+    }
+    prevScrollPos = currentScrollPos;
+  };
 
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollPos > currentScrollPos) {
-        document.querySelector("nav").classList.remove("hidden");
-      } else {
-        document.querySelector("nav").classList.add("hidden");
-      }
-      prevScrollPos = currentScrollPos;
+  useEffect(() => {
+    // Get the nav bar element
+    const navBar = document.querySelector("nav");
+    // Set initial position and direction
+    let startY = 0;
+    let direction = "";
+
+    // Add touchstart event listener
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY;
     };
-  }
+    document.addEventListener("touchstart", handleTouchStart);
+
+    // Add touchmove event listener
+    const handleTouchMove = (e) => {
+      const currentY = e.touches[0].clientY;
+      // Determine swipe direction
+      if (currentY < startY) {
+        direction = "up";
+      } else {
+        direction = "down";
+      }
+    };
+    document.addEventListener("touchmove", handleTouchMove);
+
+    // Add touchend event listener
+    const handleTouchEnd = () => {
+      // If swipe up, hide nav bar
+      if (direction === "up") {
+        navBar.classList.add("hidden");
+      }
+      // If swipe down, show nav bar
+      else if (direction === "down") {
+        navBar.classList.remove("hidden");
+      }
+    };
+    document.addEventListener("touchend", handleTouchEnd);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
 
   return (
     <nav id="nav">
