@@ -1,5 +1,5 @@
 #contact {
-  background: var(--color-bg-variant);
+  background: var(--color-bg);
 }
 
 .contact__container {
@@ -7,42 +7,22 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
   width: 1000px;
-}
-
-.contact__option {
-  background: var(--color-bg-variant);
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  border: 1px solid transparent;
-  transition: var(--transition);
-  margin: 0 0 1rem 0;
-}
-
-.contact__option:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
-}
-
-.contact__option h5 {
-  margin-bottom: 0.4rem;
-}
-
-.contact__option a {
-  font-size: 0.8rem;
-  display: block;
-  width: 150px;
+  border-top: 1px solid var(--color-primary);
+  padding-top: 7rem;
 }
 
 form {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   width: 65%;
   gap: 1rem;
+}
+
+form button {
+  width: 7rem;
 }
 
 form input,
@@ -52,41 +32,26 @@ form textarea {
   background: transparent;
   border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
   resize: none;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: var(--color-primary-variant);
+  border-color: var(--color-primary-alt);
 }
 
 ::-webkit-input-placeholder {
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   .contact__container {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-  }
-  .contact__options {
-    margin: 0 auto;
-    display: flex;
-    gap: 1rem;
-    width: 80%;
-  }
-  .contact__option {
-    margin: 0;
-    width: 50%;
+    width: 72%;
+    padding-top: 4rem;
   }
 
-  .contact__option a {
-    width: 100%;
-  }
   form {
     width: 80%;
   }
@@ -95,18 +60,12 @@ form textarea:focus {
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 600px) {
   .contact__container {
-    gap: 2rem;
-  }
-  form {
     width: 100%;
-  }
-  .contact__options {
-    flex-flow: column wrap;
-    gap: 1rem;
-    width: 100%;
+    border: none;
+    padding-top: 1rem;
   }
 
-  .contact__option {
+  form {
     width: 100%;
   }
 }

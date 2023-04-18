@@ -1,5 +1,5 @@
 #experience {
-  background: var(--color-bg-variant);
+  background: var(--color-bg);
 }
 
 .experience__container {
@@ -7,10 +7,12 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   width: 1000px;
+  border-top: 1px solid var(--color-primary);
+  padding-top: 3rem;
 }
 
 .experience__card {
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
   border-radius: 2rem;
   padding: 2rem 3rem;
   border: 1px solid transparent;
@@ -18,7 +20,7 @@
 }
 
 .experience__card:hover {
-  border-color: var(--color-primary-variant);
+  border-color: var(--color-primary-alt);
   cursor: default;
   scale: 1.07;
 }
@@ -45,7 +47,7 @@
 }
 
 .experience__details-icon {
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
   margin-top: 6px;
 }
 
@@ -53,6 +55,7 @@
 @media screen and (max-width: 1024px) {
   .experience__container {
     grid-template-columns: 1fr;
+    width: 72%;
   }
   .experience__card {
     width: 80%;
@@ -68,6 +71,9 @@
 @media screen and (max-width: 600px) {
   .experience__container {
     gap: 1rem;
+    width: 100%;
+    border: none;
+    padding-top: 1rem;
   }
 
   .experience__card {

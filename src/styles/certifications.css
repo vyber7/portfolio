@@ -1,10 +1,18 @@
 .certifications__container {
-  width: 35rem;
+  width: 1000px;
+  border-top: 1px solid var(--color-primary);
+  padding-top: 7rem;
+}
+
+.certifications__slider {
+  display: flex;
+  overflow-x: auto;
+  max-width: 35rem;
   padding-bottom: 3rem;
 }
 
 .certifications__item {
-  background-color: var(--color-bg-variant);
+  background-color: var(--color-bg-alt);
   padding: 1.2rem;
   border-radius: 2rem;
   border: 1px solid transparent;
@@ -12,7 +20,7 @@
 }
 
 .certifications__item:hover {
-  border-color: var(--color-primary-variant);
+  border-color: var(--color-primary-alt);
 }
 
 .certifications__item a {
@@ -26,7 +34,7 @@
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
   .certifications__container {
-    width: 30rem;
+    width: 72%;
   }
 }
 
@@ -36,6 +44,8 @@
 @media screen and (max-width: 600px) {
   .certifications__container {
     width: 100%;
+    border: none;
+    padding-top: 1rem;
   }
 
   .certifications__item a h3 {

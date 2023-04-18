@@ -44,27 +44,33 @@ h1 {
 
 .title {
   width: 1000px;
-  border-left: 2px solid var(--color-primary-variant);
-  margin: 0 auto 10rem;
-  padding: 0 0 0 1rem;
+
+  margin: 0 auto 1rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-areas: "svg subtitle" "svg title";
 }
 
 .title > h2,
 .title > h5 {
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
   text-align: left;
+  grid-area: subtitle;
 }
 
 .title > h2 {
   color: var(--color-primary);
   display: flex;
   margin-bottom: 1rem;
+  grid-area: title;
 }
 
 .title svg {
-  width: 30px;
-  height: 30px;
-  margin: 3px 10px 0 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color-primary);
+  grid-area: svg;
+  margin: 0.1rem 0.5rem 0 0;
 }
 
 a {
@@ -74,18 +80,18 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: var(--color-primary-variant);
+  color: var(--color-primary-alt);
   font-weight: 500;
   transition: var(--transition);
   cursor: pointer;
-  border: 1px solid var(--color-primary-variant);
+  border: 1px solid var(--color-primary-alt);
 }
 
 .btn:hover {
@@ -95,7 +101,7 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary-variant);
+  background: var(--color-primary-alt);
   color: var(--color-bg);
 }
 
@@ -112,10 +118,10 @@ img {
 
 :root {
   --color-primary: #268de0;
-  --color-primary-variant: #f75b1e;
+  --color-primary-alt: #f75b1e;
   --color-white: #feefe7;
   --color-bg: #080b0a;
-  --color-bg-variant: #233133;
+  --color-bg-alt: #233133;
 
   --container-width-lg: 100%;
   --container-width-md: 90%;
@@ -165,15 +171,6 @@ section {
   }
 
   .title {
-    max-width: var(--container-width-sm);
-    border-left: none;
-  }
-
-  .title h5 {
-    text-align: center;
-  }
-
-  .title h2 {
-    justify-content: center;
+    max-width: 95%;
   }
 }

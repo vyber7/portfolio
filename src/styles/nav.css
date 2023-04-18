@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 nav a.active {
-  border: 2px solid var(--color-primary-variant);
+  border: 2px solid var(--color-primary-alt);
   color: var(--color-primary);
 }
 
@@ -46,6 +46,9 @@ nav a svg {
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
+  .nav__container {
+    width: 72%;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
