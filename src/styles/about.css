@@ -15,11 +15,11 @@
 .about__me {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .about__me-img {
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
   transition: var(--transition);
 }
@@ -45,8 +45,8 @@ p {
   }
 
   .about__me {
-    width: 20rem;
-    margin: 2rem auto 4rem;
+    width: 15rem;
+    margin: 0 auto 3rem;
   }
 
   .about__content p {
@@ -63,7 +63,7 @@ p {
   }
 
   .about__me {
-    width: 18rem;
+    width: 13rem;
     margin: 0 auto 3rem;
   }
 
@@ -78,6 +78,6 @@ p {
 
 @media screen and (max-width: 400px) {
   .about__me {
-    width: 14rem;
+    width: 12rem;
   }
 }

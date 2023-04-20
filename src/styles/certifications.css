@@ -36,6 +36,18 @@
   .certifications__container {
     width: 72%;
   }
+
+  .certifications__slider {
+    max-width: 20rem;
+  }
+
+  .certifications__item {
+    border-radius: 1rem;
+  }
+
+  .certifications__item a h3 {
+    display: none;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
@@ -48,7 +60,7 @@
     padding-top: 1rem;
   }
 
-  .certifications__item a h3 {
-    display: none;
+  .certifications__slider {
+    max-width: 100%;
   }
 }

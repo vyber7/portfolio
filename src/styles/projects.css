@@ -10,7 +10,7 @@
 .projects__item {
   background-color: var(--color-bg-alt);
   padding: 1.2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: 1px solid transparent;
   transition: var(--transition);
 }
@@ -23,7 +23,7 @@
 .projects__item-img {
   width: 100%;
   object-fit: cover;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   overflow: hidden;
 }
 

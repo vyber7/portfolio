@@ -10,7 +10,6 @@ header {
   display: grid;
   grid-template-columns: 55% 40%;
   grid-gap: 5%;
-  align-items: top;
   justify-content: center;
   width: 1000px;
 }
@@ -47,9 +46,13 @@ header {
 }
 
 .header__socials a {
-  color: var(--color-primary);
+  color: var(--color-primary-alt);
   transition: var(--transition);
   font-size: 2rem;
+}
+
+.header__socials a:hover {
+  color: var(--color-primary);
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
@@ -60,6 +63,7 @@ header {
 
   .me {
     margin: 0 auto;
+    width: 15rem;
   }
 }
 
@@ -74,6 +78,10 @@ header {
     margin-top: 2rem;
   }
 
+  .header__socials a {
+    font-size: 1.5rem;
+  }
+
   .header__container {
     grid-template-columns: 1fr;
     grid-gap: 4rem;
@@ -84,10 +92,7 @@ header {
 
   .cta {
     justify-content: center;
-  }
-
-  .me {
-    width: 18rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -105,18 +110,18 @@ header {
     font-size: 1.5rem;
   }
   .me {
-    width: 18rem;
+    width: 13rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .me {
-    width: 14rem;
+    width: 12rem;
   }
 }
 /*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
 @media screen and (max-height: 940px) {
   header {
-    height: 940px;
+    height: 900px;
   }
 }
