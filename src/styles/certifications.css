@@ -14,7 +14,7 @@
 .certifications__item {
   background-color: var(--color-bg-alt);
   padding: 1.2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: 1px solid transparent;
   transition: var(--transition);
 }
@@ -38,11 +38,7 @@
   }
 
   .certifications__slider {
-    max-width: 20rem;
-  }
-
-  .certifications__item {
-    border-radius: 1rem;
+    max-width: 25rem;
   }
 
   .certifications__item a h3 {

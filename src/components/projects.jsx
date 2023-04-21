@@ -65,7 +65,7 @@ function Projects() {
         {data.map((item, i) => {
           return (
             <article className="projects__item" key={i}>
-              <div className="projects__item-img">
+              <div className="projects__item-img overlay">
                 <img src={item.img} alt="img"></img>
               </div>
               <h3>{item.title}</h3>

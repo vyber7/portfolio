@@ -8,8 +8,8 @@ header {
 
 .header__container {
   display: grid;
-  grid-template-columns: 55% 40%;
-  grid-gap: 5%;
+  grid-template-columns: 55% 30%;
+  grid-gap: 15%;
   justify-content: center;
   width: 1000px;
 }
@@ -120,8 +120,34 @@ header {
   }
 }
 /*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
-@media screen and (max-height: 940px) {
+@media screen and (max-height: 900px) {
   header {
-    height: 900px;
+    margin-top: 5rem;
+    height: 800px;
   }
 }
+
+/*<style>
+  .overlay {
+    position: relative;
+    display: inline-block;
+  }
+  .overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.5);
+    z-index: 1;
+  }
+  .overlay img {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<div class="overlay">
+  <img src="your-image.jpg" alt="Your Image">
+</div>*/

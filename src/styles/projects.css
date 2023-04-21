@@ -27,6 +27,31 @@
   overflow: hidden;
 }
 
+/*======================== OVERLAY ====================*/
+/*
+.overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-alt);
+  opacity: 0;
+  z-index: 2;
+}
+
+.me img {
+  position: relative;
+  z-index: 1;
+}
+*/
+
 .projects__item h3 {
   margin: 1.2rem 0;
 }
