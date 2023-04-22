@@ -1,7 +1,6 @@
 #about {
-  background: var(--color-bg);
   width: 100%;
-  margin-top: 0;
+  margin-top: 6rem;
 }
 
 .about__container {

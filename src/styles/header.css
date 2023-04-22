@@ -4,6 +4,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--color-bg-alt);
 }
 
 .header__container {
@@ -59,11 +60,12 @@ header {
 @media screen and (max-width: 1024px) {
   .header__container {
     width: 72%;
+    grid-template-columns: 55% 40%;
+    grid-gap: 5%;
   }
 
   .me {
     margin: 0 auto;
-    width: 15rem;
   }
 }
 
@@ -94,6 +96,11 @@ header {
     justify-content: center;
     font-size: 0.8rem;
   }
+
+  .me {
+    width: 15rem;
+    margin: 0 auto 3rem;
+  }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
@@ -120,10 +127,15 @@ header {
   }
 }
 /*======================== MEDIA QUERIES (MINIMUM HEIGHT) ====================*/
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 870px) and (min-width: 800px) {
+  .header__socials {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-height: 870px) {
   header {
-    margin-top: 5rem;
-    height: 800px;
+    height: 870px;
   }
 }
 
