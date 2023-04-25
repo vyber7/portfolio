@@ -44,7 +44,6 @@ h1 {
 
 .title {
   width: 1000px;
-
   margin: 0 auto 1rem;
   display: grid;
   grid-template-columns: 4rem 1fr;
@@ -162,17 +161,22 @@ section {
 
   .title {
     max-width: 72%;
+    grid-template-columns: 3rem 1fr;
+  }
+
+  .title svg {
+    width: 2.5rem;
   }
 }
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 800px) {
   .title {
-    grid-template-columns: 3rem 1fr;
+    grid-template-columns: 0 1fr;
   }
 
   .title svg {
-    width: 2.5rem;
+    display: none;
   }
 }
 
@@ -191,9 +195,5 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .title svg {
-    display: none;
   }
 }

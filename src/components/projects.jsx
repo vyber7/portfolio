@@ -75,7 +75,7 @@ function Projects() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Demo
+                View
               </a>
             </article>
           );

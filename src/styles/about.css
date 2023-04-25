@@ -28,6 +28,10 @@
   transform: scale(1.07);
 }
 
+.about__content div {
+  text-align: justify;
+}
+
 .about__content {
   text-align: left;
 }

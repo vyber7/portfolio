@@ -12,15 +12,14 @@
 }
 
 .certifications__item {
-  background-color: var(--color-bg-alt);
-  padding: 1.2rem;
-  border-radius: 1rem;
+  background-color: transparent;
+
   border: 1px solid transparent;
   transition: var(--transition);
 }
 
-.certifications__item:hover {
-  border-color: var(--color-primary-alt);
+.certifications__item:hover > a {
+  color: var(--color-primary);
 }
 
 .certifications__item a {

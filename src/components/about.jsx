@@ -45,7 +45,7 @@ function About() {
             </p>
           </div>
           <Link to="contact" className="btn btn-primary">
-            Let's Talk
+            Send me a Message
           </Link>
         </div>
       </div>
