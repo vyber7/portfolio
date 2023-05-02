@@ -51,6 +51,11 @@ footer {
   color: var(--color-primary);
 }
 
+.footer__copyright svg {
+  position: relative;
+  top: 0.125rem;
+}
+
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/
 @media screen and (max-width: 1024px) {
 }

@@ -3,6 +3,7 @@ import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { SiCodepen } from "react-icons/si";
 import { Link } from "react-scroll";
+import { AiOutlineCopyright } from "react-icons/ai";
 
 function Footer() {
   return (
@@ -40,7 +41,10 @@ function Footer() {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; Vitaliy Bernatskyy. All rights reserved.</small>
+        <small>
+          Copyright <AiOutlineCopyright /> 2023 Vitaliy Bernatskyy. All rights
+          reserved.
+        </small>
       </div>
     </footer>
   );
