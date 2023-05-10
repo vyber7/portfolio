@@ -23,6 +23,10 @@ nav {
   top: -110px;
 }
 
+.hiddenBottom {
+  bottom: -110px;
+}
+
 nav a {
   cursor: pointer;
   background: transparent;
@@ -83,6 +87,7 @@ nav a svg {
 
   nav.hidden {
     top: auto;
+    bottom: -110px;
   }
 }
 

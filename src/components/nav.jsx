@@ -5,27 +5,30 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Nav() {
   const [active, setActive] = useState("#header");
 
-  // Hide navbar on scroll down and show on scroll up
-  let prevScrollPos = window.pageYOffset;
-
-  window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      document.querySelector("nav").classList.remove("hidden");
-    } else {
-      document.querySelector("nav").classList.add("hidden");
-    }
-    prevScrollPos = currentScrollPos;
-  };
+  // Set up ref for nav bar
+  const navBar = useRef(null);
 
   useEffect(() => {
+    // Hide navbar on scroll down and show on scroll up
+    let prevScrollPos = window.pageYOffset;
     // Get the nav bar element
-    const navBar = document.querySelector("nav");
+
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        navBar.current.classList.remove("hidden");
+      } else {
+        navBar.current.classList.add("hidden");
+      }
+      prevScrollPos = currentScrollPos;
+    };
+
+    // Hide navbar on swipe up and show on swipe down
     // Set initial position and direction
     let startY = 0;
     let direction = "";
@@ -51,12 +54,13 @@ function Nav() {
     // Add touchend event listener
     const handleTouchEnd = () => {
       // If swipe up, hide nav bar
+
       if (direction === "up") {
-        navBar.classList.add("hidden");
+        navBar.current.classList.add("hidden");
       }
       // If swipe down, show nav bar
       else if (direction === "down") {
-        navBar.classList.remove("hidden");
+        navBar.current.classList.remove("hidden");
       }
     };
     document.addEventListener("touchend", handleTouchEnd);
@@ -66,11 +70,12 @@ function Nav() {
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
+      window.onscroll = null;
     };
   }, []);
 
   return (
-    <nav id="nav">
+    <nav id="nav" ref={navBar}>
       <div className="container nav__container">
         <Link
           to="header"

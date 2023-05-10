@@ -62,15 +62,6 @@ footer {
 
 /*======================== MEDIA QUERIES (SMALL DEVICES) ====================*/
 @media screen and (max-width: 800px) {
-  .footer__copyright::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: var(--color-primary-alt);
-    margin: 0.6rem 0;
-  }
-
   footer {
     padding-bottom: 4rem;
   }
