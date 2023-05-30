@@ -5,8 +5,6 @@
 .message {
   opacity: 0;
   font-size: 0.8rem;
-  background: var(--color-bg);
-  vertical-align: middle;
   border-radius: 0.5rem;
   align-self: center;
   z-index: 100;

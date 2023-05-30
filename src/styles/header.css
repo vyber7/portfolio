@@ -32,7 +32,6 @@ header {
 
 .me {
   border-radius: 1rem;
-  background: linear-gradient(var(--color-primary), transparent);
   width: 100%;
   overflow: hidden;
 }
