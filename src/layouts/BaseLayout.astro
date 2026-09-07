@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b1111" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Vitaliy Bernatskyy, home">
+        <span>VB</span><span class="wordmark-copy">Vitaliy Bernatskyy</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="https://github.com/vyber7" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <p>Built with Astro + React.</p>
+      <p>© {year} Vitaliy Bernatskyy</p>
+    </footer>
+  </body>
+</html>

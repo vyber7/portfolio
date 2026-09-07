@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import carAuctions from "../../assets/car_auctions.png";
+---
+
+<BaseLayout
+  title="Car Auctions Case Study — Vitaliy Bernatskyy"
+  description="A closer look at the product decisions and full-stack architecture behind Vitaliy Bernatskyy’s real-time car auction application."
+>
+  <article class="case-study">
+    <header class="case-hero shell">
+      <a class="back-link" href="/#work">← All work</a>
+      <p class="eyebrow">Featured case study · Full-stack development</p>
+      <h1>Car Auctions</h1>
+      <p class="case-intro">A responsive marketplace designed to keep browsing, bidding, comments, and auction timing synchronized as the action unfolds.</p>
+      <div class="case-actions">
+        <a class="button button-primary" href="https://car-auctions-steel.vercel.app/" target="_blank" rel="noreferrer">Open live product ↗</a>
+        <a class="button button-quiet" href="https://github.com/vyber7/car-auctions/" target="_blank" rel="noreferrer">Explore source ↗</a>
+      </div>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Full-stack developer</dd></div>
+        <div><dt>Product</dt><dd>Real-time marketplace</dd></div>
+        <div><dt>Core stack</dt><dd>Next.js · TypeScript · MongoDB</dd></div>
+      </dl>
+    </header>
+
+    <div class="case-visual shell">
+      <img src={carAuctions.src} alt="Car Auctions marketplace showing a grid of vehicle listings" width="1920" height="1080" />
+    </div>
+
+    <section class="case-section shell" aria-labelledby="challenge-title">
+      <p class="section-index">01 / THE CHALLENGE</p>
+      <div class="case-section-body">
+        <h2 id="challenge-title">One interface, several clocks.</h2>
+        <p class="case-lede">An auction experience has to make changing information feel trustworthy.</p>
+        <p>
+          Listings, bids, comments, watchers, and countdowns all change on different timelines. The product needed to keep those signals understandable while still supporting the everyday work of listing and discovering vehicles.
+        </p>
+      </div>
+    </section>
+
+    <section class="architecture-section">
+      <div class="shell">
+        <p class="section-index">02 / SYSTEM SHAPE</p>
+        <h2>A clear responsibility for every layer.</h2>
+        <div class="architecture-flow" aria-label="Application architecture">
+          <div><span>01</span><h3>Next.js + React</h3><p>Responsive browsing, listing, bidding, and commenting flows.</p></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><span>02</span><h3>Auth + Data</h3><p>NextAuth protects identity-aware actions; MongoDB stores application state.</p></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><span>03</span><h3>Live services</h3><p>Pusher distributes updates while Cloudinary manages uploaded vehicle media.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section shell" aria-labelledby="decisions-title">
+      <p class="section-index">03 / KEY DECISIONS</p>
+      <div class="case-section-body">
+        <h2 id="decisions-title">Designed around product boundaries.</h2>
+        <div class="decision-list">
+          <article><span>Realtime</span><h3>Push meaningful changes</h3><p>Pusher carries live activity so users can see auction updates without manually refreshing the experience.</p></article>
+          <article><span>Identity</span><h3>Protect participation</h3><p>NextAuth separates public browsing from authenticated actions such as bidding, commenting, and selling.</p></article>
+          <article><span>Media</span><h3>Keep uploads outside the app</h3><p>Cloudinary handles vehicle images, keeping media delivery separate from the application’s primary data.</p></article>
+          <article><span>Responsive UI</span><h3>Preserve the auction hierarchy</h3><p>Tailwind CSS supports a layout where time, price, and the primary action remain legible across screen sizes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-reflection shell" aria-labelledby="reflection-title">
+      <p class="section-index">04 / REFLECTION</p>
+      <div class="case-section-body">
+        <h2 id="reflection-title">The result is a complete product loop.</h2>
+        <p class="case-lede">Users can move from discovery to participation without leaving the application.</p>
+        <p>
+          The project brings together the core concerns of a marketplace—identity, inventory, communication, media, and changing state—inside one full-stack implementation. It is also the foundation I would extend next with automated integration tests, clearer operational monitoring, and deeper seller tools.
+        </p>
+        <div class="case-actions">
+          <a class="button button-primary" href="https://car-auctions-steel.vercel.app/" target="_blank" rel="noreferrer">Try the product ↗</a>
+          <a class="text-link" href="/#contact">Discuss a project <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
