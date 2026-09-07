@@ -1,6 +1,5 @@
 import "../styles/footer.css";
 import { SiGithub } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
 import { SiCodepen } from "react-icons/si";
 import { Link } from "react-scroll";
 import { AiOutlineCopyright } from "react-icons/ai";
@@ -35,14 +34,11 @@ function Footer() {
         <a href="https://codepen.io/vyber7" target="_blank" rel="noreferrer">
           <SiCodepen />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-          <SiLinkedin />
-        </a>
       </div>
 
       <div className="footer__copyright">
         <small>
-          Copyright <AiOutlineCopyright /> 2023 Vitaliy Bernatskyy. All rights
+          Copyright <AiOutlineCopyright /> 2026 Vitaliy Bernatskyy. All rights
           reserved.
         </small>
       </div>

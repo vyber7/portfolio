@@ -21,6 +21,7 @@ header {
 
 .intro h5:last-of-type {
   color: var(--color-primary);
+  padding-bottom: 1rem;
 }
 
 .cta {
@@ -34,6 +35,11 @@ header {
   border-radius: 1rem;
   width: 100%;
   overflow: hidden;
+  transition: var(--transition);
+}
+
+.me:hover {
+  transform: scale(1.07);
 }
 
 .header__socials {

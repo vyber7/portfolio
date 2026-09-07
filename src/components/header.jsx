@@ -2,7 +2,6 @@ import "../styles/header.css";
 import CTA from "./CTA";
 import ME from "../assets/me.jpg";
 import { SiGithub } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
 import { SiCodepen } from "react-icons/si";
 
 function Header() {
@@ -12,7 +11,12 @@ function Header() {
         <div className="intro">
           <h5>Hello, I am</h5>
           <h1>Vitaliy Bernatskyy</h1>
-          <h5>Fullstack Developer</h5>
+          <h5>Web Developer</h5>
+          <p className="moto">
+            {" "}
+            I build beautiful, responsive, and functional websites and web
+            applications, from inception to production.
+          </p>
           <CTA />
         </div>
         <div className="me_socials">
@@ -33,9 +37,6 @@ function Header() {
               rel="noreferrer"
             >
               <SiCodepen />
-            </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
-              <SiLinkedin />
             </a>
           </div>
         </div>

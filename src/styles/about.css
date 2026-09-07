@@ -4,11 +4,11 @@
 }
 
 .about__container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 30% 60%;
-  grid-gap: 10%;
+  grid-gap: 10%; */
   width: 1000px;
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary-alt);
   padding-top: 3rem;
 }
 
@@ -28,10 +28,6 @@
   transform: scale(1.07);
 }
 
-.about__content div {
-  text-align: justify;
-}
-
 .about__content {
   text-align: left;
 }
@@ -46,6 +42,7 @@ p {
     grid-template-columns: 1fr;
     grid-gap: 0;
     width: 72%;
+    padding-top: 1rem;
   }
 
   .about__me {

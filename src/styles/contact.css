@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 1000px;
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary-alt);
   padding-top: 5rem;
 }
 
@@ -39,6 +39,7 @@ form button {
 
 form input,
 form textarea {
+  font: inherit;
   width: 100%;
   padding: 1rem 1.5rem;
   background: transparent;

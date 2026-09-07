@@ -1,6 +1,6 @@
 .certifications__container {
   width: 1000px;
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary-alt);
   padding-top: 7rem;
 }
 
@@ -8,12 +8,12 @@
   display: flex;
   overflow-x: auto;
   max-width: 35rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .certifications__item {
   background-color: transparent;
-
+  padding-bottom: 3.5rem;
   border: 1px solid transparent;
   transition: var(--transition);
 }
@@ -28,6 +28,10 @@
 
 .certifications__item a h3 {
   margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-primary) !important;
 }
 
 /*======================== MEDIA QUERIES (MEDIUM DEVICES) ====================*/

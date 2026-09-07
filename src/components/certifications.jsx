@@ -1,13 +1,16 @@
 import React from "react";
 import "../styles/certifications.css";
 import ResponsiveWebDesign from "../assets/responsive_web_design.png";
-import JSAlgorithmsAndDataStructures from "../assets/js_algorithms_and_data_structures.png";
-import FrontEndDevelopmentLibraries from "../assets/front_end_development_libraries.png";
+import JSAlgorithmsAndDataStructures from "../assets/algorithms_and_data_structures.png";
+import FrontEndDevelopmentLibraries from "../assets/frontend_libraries.png";
 import DataVisualization from "../assets/data_visualization.png";
-import BackEndDevelopmentAndAPIs from "../assets/back_end_development_and_apis.png";
-import { register } from "swiper/element/bundle";
+import BackEndDevelopmentAndAPIs from "../assets/backend_and_apis.png";
 
-register();
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const data = [
   {
@@ -41,31 +44,34 @@ function Certs() {
   return (
     <section id="certifications">
       <div className="title">
-        <h5>My Certifications</h5>
         <h2>Certifications</h2>
       </div>
       <div className="container certifications__container">
-        <swiper-container
-          pagination="true"
-          slides-per-view="1"
-          speed="400"
-          space-between="100"
-          loop="true"
-          autoplay="true"
-          disable-on-interaction="false"
-          class="certifications__slider"
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="certifications__slider"
         >
           {data.map((item, i) => {
             return (
-              <swiper-slide class="certifications__item" key={i}>
+              <SwiperSlide className="certifications__item" key={i}>
                 <a href={item.demo} target="_blank" rel="noreferrer">
                   <img src={item.img} alt="img"></img>
                   <h3>{item.title}</h3>
                 </a>
-              </swiper-slide>
+              </SwiperSlide>
             );
           })}
-        </swiper-container>
+        </Swiper>
       </div>
     </section>
   );
