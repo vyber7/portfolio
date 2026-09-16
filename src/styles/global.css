@@ -49,7 +49,7 @@ h1 em { color: var(--orange); font-style: normal; }
 .portrait-meta { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .7rem; color: var(--muted); font: 600 .63rem var(--mono); letter-spacing: .04em; }
 .portrait-meta span:first-child { color: var(--orange); }
 .selected-work { padding-block: 8rem 10rem; }
-.section-heading { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; align-items: end; margin-bottom: 3rem; padding-top: 1rem; border-top: 1px solid var(--line-strong); }
+.section-heading { display: grid; grid-template-columns: 1fr; gap: .5rem; align-items: end; margin-bottom: 3rem; padding-top: 1rem; border-top: 1px solid var(--line-strong); }
 .section-heading h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.055em; }
 .section-index { padding-top: .5rem; }
 .feature-card { display: grid; grid-template-columns: 1.25fr .75fr; background: var(--ink-2); border: 1px solid var(--line); }
@@ -86,6 +86,7 @@ h1 em { color: var(--orange); font-style: normal; }
 .capability-list span { color: var(--blue); font: 600 .72rem var(--mono); text-transform: uppercase; }
 .capability-list p { margin: 0; color: var(--muted); }
 .experience-section { padding-block: 9rem; }
+.experience-section .section-heading { grid-template-columns: .7fr 1.3fr; column-gap: 2rem; align-items: start; }
 .experience-entry { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; padding: 3rem 0 5rem; border-bottom: 1px solid var(--line); }
 .experience-meta p { margin: 0 0 .45rem; color: var(--muted); font: 600 .75rem var(--mono); text-transform: uppercase; }
 .experience-meta p:first-child { color: var(--blue); }
@@ -158,8 +159,8 @@ h1 em { color: var(--orange); font-style: normal; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 3.5rem; padding-block: 5rem; }
   h1 { font-size: clamp(3.15rem, 15vw, 5.8rem); }
   .portrait-wrap { max-width: 380px; }
-  .section-heading, .feature-card { grid-template-columns: 1fr; }
-  .section-heading { gap: .5rem; }
+  .feature-card { grid-template-columns: 1fr; }
+  .experience-section .section-heading { grid-template-columns: 1fr; }
   .feature-image { min-height: 330px; }
   .supporting-grid { grid-template-columns: 1fr; }
   .about-grid, .experience-entry, .credentials-row, .contact-grid, .case-section { grid-template-columns: 1fr; }
