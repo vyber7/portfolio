@@ -1,17 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import carAuctions from "../../assets/car_auctions.png";
+import bidLane from "../../assets/homepage-desktop.png";
 ---
 
 <BaseLayout
-  title="Car Auctions Case Study — Vitaliy Bernatskyy"
+  title="BidLane Case Study — Vitaliy Bernatskyy"
   description="A closer look at the product decisions and full-stack architecture behind Vitaliy Bernatskyy’s real-time car auction application."
 >
   <article class="case-study">
     <header class="case-hero shell">
       <a class="back-link" href="/#work">← All work</a>
       <p class="eyebrow">Featured · Full-stack development</p>
-      <h1>Car Auctions</h1>
+      <h1>BidLane</h1>
       <p class="case-intro">A responsive marketplace designed to keep browsing, bidding, comments, and auction timing synchronized as the action unfolds.</p>
       <div class="case-actions">
         <a class="button button-primary" href="https://car-auctions-steel.vercel.app/" target="_blank" rel="noreferrer">Open live product ↗</a>
@@ -25,7 +25,7 @@ import carAuctions from "../../assets/car_auctions.png";
     </header>
 
     <div class="case-visual shell">
-      <img src={carAuctions.src} alt="Car Auctions marketplace showing a grid of vehicle listings" width="1920" height="1080" />
+      <img src={bidLane.src} alt="BidLane marketplace showing a grid of vehicle listings" width={bidLane.width} height={bidLane.height} />
     </div>
 
     <section class="case-section shell" aria-labelledby="challenge-title">

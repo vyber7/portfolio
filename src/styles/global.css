@@ -128,7 +128,7 @@ h1 em { color: var(--orange); font-style: normal; }
 .case-facts dt { margin-bottom: .35rem; color: var(--blue); font: 600 .68rem var(--mono); text-transform: uppercase; }
 .case-facts dd { margin: 0; }
 .case-visual { border: 1px solid var(--line); background: var(--panel); padding: clamp(.5rem, 2vw, 1.5rem); }
-.case-visual img { width: 100%; }
+.case-visual img { width: 100%; height: auto; }
 .case-section { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; padding-block: 9rem; border-bottom: 1px solid var(--line); }
 .case-section-body { max-width: 760px; }
 .case-section h2, .architecture-section h2 { font-size: clamp(2.7rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.055em; }
