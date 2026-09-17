@@ -75,11 +75,11 @@ h1 em { color: var(--orange); font-style: normal; }
 .supporting-card p { margin-bottom: 1.5rem; color: var(--muted); font-size: .92rem; }
 .card-link { margin-top: auto; color: var(--orange); font: 650 .7rem var(--mono); text-transform: uppercase; }
 .about-section { padding-block: 9rem; border-block: 1px solid var(--line); background: var(--ink-2); }
-.about-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem 5rem; }
+.about-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; }
 .about-heading { display: block; margin: 0; padding-right: 2rem; border-top-color: var(--orange); }
 .about-heading h2 { margin-top: 4rem; font-size: clamp(2.8rem, 5vw, 4.8rem); }
 .about-copy { padding-top: 3.4rem; }
-.about-copy p { max-width: 680px; color: var(--muted); }
+.about-copy p { color: var(--muted); }
 .about-copy .about-lede { color: var(--text); font-size: clamp(1.3rem, 2.5vw, 1.75rem); line-height: 1.4; }
 .capability-list { grid-column: 2; margin-top: 2rem; border-top: 1px solid var(--line); }
 .capability-list div { display: grid; grid-template-columns: .35fr .65fr; gap: 1rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
@@ -90,7 +90,6 @@ h1 em { color: var(--orange); font-style: normal; }
 .experience-entry { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; padding: 3rem 0 5rem; border-bottom: 1px solid var(--line); }
 .experience-meta p { margin: 0 0 .45rem; color: var(--muted); font: 600 .75rem var(--mono); text-transform: uppercase; }
 .experience-meta p:first-child { color: var(--blue); }
-.experience-story { max-width: 700px; }
 .experience-story h3 { font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.15; letter-spacing: -.04em; }
 .experience-story > p { color: var(--muted); }
 .experience-story .outcome { margin: 2rem 0 0; padding: 1.2rem 1.4rem; border-left: 2px solid var(--orange); background: var(--ink-2); color: var(--text); }
