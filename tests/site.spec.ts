@@ -24,6 +24,13 @@ test("case study and available primary navigation reach their destinations", asy
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("BidLane");
   await page.getByRole("link", { name: "All work" }).click();
   await expect(page).toHaveURL(/\/#work$/);
+  await page.getByRole("link", { name: "For employers", exact: true }).click();
+  await expect(page).toHaveURL(/\/#employers$/);
+  await expect(page.getByRole("link", { name: "View résumé" })).toBeVisible();
+  await page.getByRole("link", { name: "Vitaliy Bernatskyy, home" }).click();
+  await page.getByRole("link", { name: "Discuss your project", exact: true }).click();
+  await expect(page).toHaveURL(/\/#contact$/);
+  await expect(page.locator("#contact")).toBeInViewport();
   const navigation = page.getByRole("navigation", { name: "Primary navigation", includeHidden: true });
   if (isMobile) {
     // The current mobile design hides the header navigation.
@@ -35,7 +42,7 @@ test("case study and available primary navigation reach their destinations", asy
     await expect(page.locator("#work")).toBeInViewport();
     return;
   }
-  for (const section of ["About", "Contact", "Work"]) {
+  for (const section of ["Services", "About", "Contact", "Work"]) {
     await navigation.getByRole("link", { name: section, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`/#${section.toLowerCase()}$`));
     await expect(page.locator(`#${section.toLowerCase()}`)).toBeInViewport();

@@ -39,6 +39,18 @@ h1 { max-width: 880px; margin-bottom: 2rem; font-size: clamp(3.25rem, 7.1vw, 6.7
 h1 em { color: var(--orange); font-style: normal; }
 .hero-lede { max-width: 680px; margin-bottom: 2.5rem; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.3rem); }
 .actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.employer-note { margin: 1.5rem 0 0; color: var(--muted); font-size: .9rem; }
+.employer-note a { text-underline-offset: 4px; }
+section[id] { scroll-margin-top: 100px; }
+.services-section { padding-block: 5rem 0; }
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+.service-card { padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--ink-2); }
+.service-card h3 { font-size: 1.65rem; line-height: 1.2; letter-spacing: -.03em; }
+.service-card > p:last-child { margin-bottom: 0; color: var(--muted); }
+.services-next-step { max-width: 760px; margin: 2rem 0 0; color: var(--muted); }
+.employer-intro { max-width: 760px; margin-left: auto; }
+.employer-intro > p { color: var(--muted); font-size: 1.1rem; }
+.employer-intro .actions { align-items: center; gap: 1.5rem; }
 .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .7rem 1rem; border: 1px solid var(--line-strong); font: 700 .78rem var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .04em; transition: .2s ease; }
 .button-primary { border-color: var(--orange); background: var(--orange); color: var(--ink); }
 .button:hover { transform: translateY(-2px); border-color: var(--text); }
@@ -99,8 +111,8 @@ h1 em { color: var(--orange); font-style: normal; }
 .credentials-row a { color: var(--muted); text-underline-offset: 4px; }
 .credentials-row a:hover { color: var(--orange); }
 .contact-section { padding-block: 9rem; background: var(--blue); color: #071011; }
-.contact-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(3rem, 8vw, 8rem); }
-.contact-section .section-index { color: #071011; opacity: .7; }
+.contact-grid { display: grid; grid-template-columns: .75fr 1.25fr; align-items: start; gap: clamp(3rem, 8vw, 8rem); }
+.contact-section .section-index { padding-top: 0; color: #071011; opacity: .7; }
 .contact-section h2 { margin-bottom: 1.5rem; font-size: clamp(3rem, 6vw, 5.5rem); line-height: .95; letter-spacing: -.065em; }
 .contact-section > div > div > p:not(.section-index) { max-width: 440px; }
 .contact-links { display: flex; gap: 1.5rem; margin-top: 2rem; font: 700 .75rem var(--mono); text-transform: uppercase; }
@@ -162,6 +174,7 @@ h1 em { color: var(--orange); font-style: normal; }
   .experience-section .section-heading { grid-template-columns: 1fr; }
   .feature-image { grid-column: auto; min-height: 330px; }
   .supporting-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .about-grid, .experience-entry, .credentials-row, .contact-grid, .case-section { grid-template-columns: 1fr; }
   .about-heading { padding-right: 0; }
   .about-heading h2 { margin-top: 2rem; }

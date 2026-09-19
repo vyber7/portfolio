@@ -40,9 +40,10 @@ export default function ContactForm() {
         </label>
       </div>
       <label>
-        <span>What are you building?</span>
-        <textarea name="message" rows={6} required />
+        <span>How can I help?</span>
+        <textarea name="message" rows={6} aria-describedby="message-hint" required />
       </label>
+      <small id="message-hint">A website, a web app, ongoing maintenance, or a developer opportunity—tell me what you have in mind.</small>
       <div className="form-footer">
         <p className={`form-status status-${status}`} aria-live="polite">
           {status === "success" && "Message sent. I’ll get back to you soon."}

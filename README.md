@@ -1,6 +1,6 @@
-# Vitaliy Bernatskyy — Portfolio
+# Vitaliy Bernatskyy — Web Development Services
 
-A content-first portfolio built with Astro, React, and TypeScript. Most pages render as static HTML; React is reserved for the interactive contact form.
+A services-first personal site for local business websites, custom web apps, and ongoing maintenance, with selected work and a secondary path for employers. Built with Astro, React, and TypeScript. Most pages render as static HTML; React is reserved for the interactive contact form.
 
 ## Development
 

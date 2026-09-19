@@ -7,7 +7,7 @@ const details = { name: "Test Visitor", email: "visitor@example.com", message: "
 async function fillForm(page: Page) {
   await page.getByLabel("Name", { exact: true }).fill(details.name);
   await page.getByLabel("Email", { exact: true }).fill(details.email);
-  await page.getByLabel("What are you building?").fill(details.message);
+  await page.getByLabel("How can I help?").fill(details.message);
 }
 
 test.beforeEach(async ({ page }) => {
@@ -20,7 +20,7 @@ test.beforeEach(async ({ page }) => {
 for (const invalid of [
   { label: "Name", value: "", reason: "valueMissing" },
   { label: "Email", value: "", reason: "valueMissing" },
-  { label: "What are you building?", value: "", reason: "valueMissing" },
+  { label: "How can I help?", value: "", reason: "valueMissing" },
   { label: "Email", value: "invalid-email", reason: "typeMismatch" },
 ] as const) {
   test(`rejects ${invalid.label}: ${invalid.reason}`, async ({ page }) => {
@@ -61,7 +61,7 @@ test("sends entered details once, then shows success and clears the form", async
   await requests[0].fulfill({ status: 200, contentType: "text/plain", body: "OK" });
   await expect(page.locator("[aria-live='polite']")).toContainText("Message sent.");
   await expect(page.getByRole("button", { name: "Send message" })).toBeEnabled();
-  for (const label of ["Name", "Email", "What are you building?"]) {
+  for (const label of ["Name", "Email", "How can I help?"]) {
     await expect(page.getByLabel(label, { exact: true })).toHaveValue("");
   }
   expect(requests).toHaveLength(1);
@@ -78,7 +78,7 @@ test("keeps entered details on failure and allows a successful retry", async ({ 
   await expect(page.locator("[aria-live='polite']")).toContainText("That didn’t send.");
   await expect(page.getByLabel("Name", { exact: true })).toHaveValue(details.name);
   await expect(page.getByLabel("Email", { exact: true })).toHaveValue(details.email);
-  await expect(page.getByLabel("What are you building?")).toHaveValue(details.message);
+  await expect(page.getByLabel("How can I help?")).toHaveValue(details.message);
   await page.getByRole("button", { name: "Send message" }).click();
   await expect(page.locator("[aria-live='polite']")).toContainText("Message sent.");
   expect(attempts).toBe(2);
