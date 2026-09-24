@@ -48,7 +48,7 @@ section[id] { scroll-margin-top: 100px; }
 .service-card h3 { font-size: 1.65rem; line-height: 1.2; letter-spacing: -.03em; }
 .service-card > p:last-child { margin-bottom: 0; color: var(--muted); }
 .services-next-step { max-width: 760px; margin: 2rem 0 0; color: var(--muted); }
-.employer-intro { max-width: 760px; margin-left: auto; }
+.employer-intro { width: calc(65% - 1.3rem); margin-left: auto; }
 .employer-intro > p { color: var(--muted); font-size: 1.1rem; }
 .employer-intro .actions { align-items: center; gap: 1.5rem; }
 .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .7rem 1rem; border: 1px solid var(--line-strong); font: 700 .78rem var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .04em; transition: .2s ease; }
@@ -172,6 +172,7 @@ section[id] { scroll-margin-top: 100px; }
   .portrait-wrap { max-width: 380px; }
   .feature-card { grid-template-columns: 1fr; }
   .experience-section .section-heading { grid-template-columns: 1fr; }
+  .employer-intro { width: 100%; margin-left: 0; }
   .feature-image { grid-column: auto; min-height: 330px; }
   .supporting-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
