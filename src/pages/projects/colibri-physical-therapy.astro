@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import colibri from "../../assets/colibri-homepage.png";
+---
+
+<BaseLayout
+  title="Colibri Physical Therapy Case Study — Vitaliy Bernatskyy"
+  description="A responsive physical therapy website with a welcoming visual identity, clear service information, and an accessible visit-request flow."
+>
+  <article class="case-study">
+    <header class="case-hero shell">
+      <a class="back-link" href="/#work">← All work</a>
+      <p class="eyebrow">Business website · Design & development</p>
+      <h1>Colibri Physical Therapy</h1>
+      <p class="case-intro">A welcoming website that helps visitors understand a practice’s services, get to know their therapist, and take the first step toward a visit.</p>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Website design & development</dd></div>
+        <div><dt>Project</dt><dd>Physical therapy website</dd></div>
+        <div><dt>Core stack</dt><dd>HTML · CSS · JavaScript · EmailJS</dd></div>
+      </dl>
+    </header>
+
+    <div class="case-visual shell">
+      <img src={colibri.src} alt="Colibri Physical Therapy homepage showing the Move freely. Live fully. headline, hummingbird imagery, and Request a visit button" width={colibri.width} height={colibri.height} />
+    </div>
+
+    <section class="case-section shell" aria-labelledby="challenge-title">
+      <p class="section-index">01 / THE CHALLENGE</p>
+      <div class="case-section-body">
+        <h2 id="challenge-title">Make the first step feel approachable.</h2>
+        <p class="case-lede">Visitors need to understand the care on offer and how to get started.</p>
+        <p>
+          The site brings services, a therapist introduction, the visit process, and common questions into one clear page. Repeated “Request a visit” buttons give visitors a way to get in touch wherever they are in that journey.
+        </p>
+      </div>
+    </section>
+
+    <section class="architecture-section">
+      <div class="shell">
+        <p class="section-index">02 / THE EXPERIENCE</p>
+        <h2>From a first impression to a conversation.</h2>
+        <div class="architecture-flow" aria-label="Website visitor journey">
+          <div><span>01</span><h3>Explore the practice</h3><p>A hummingbird identity, soft greens, and generous spacing establish the visual tone alongside a clear introduction to the services.</p></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><span>02</span><h3>Understand the next steps</h3><p>The therapist profile, visit process, and expandable FAQs help visitors find answers before reaching out.</p></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><span>03</span><h3>Request a visit</h3><p>A contact dialog collects basic details. The practice can follow up to discuss the visit and share a scheduling link.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section shell" aria-labelledby="decisions-title">
+      <p class="section-index">03 / KEY DECISIONS</p>
+      <div class="case-section-body">
+        <h2 id="decisions-title">Simple pages, thoughtful interactions.</h2>
+        <div class="decision-list">
+          <article><span>Visual identity</span><h3>Carry the brand through the page</h3><p>The hummingbird mark and hero imagery work with serif headings and a green palette to create a consistent, welcoming presentation.</p></article>
+          <article><span>Responsive layout</span><h3>Keep information easy to scan</h3><p>Desktop sections become a single column on smaller screens, with a collapsible menu and a visit-request form that fits the available space.</p></article>
+          <article><span>Accessibility</span><h3>Support keyboard navigation</h3><p>A skip link, visible focus styles, native FAQ disclosures, and dialog focus management support navigation without a mouse. Reduced-motion preferences are respected.</p></article>
+          <article><span>Contact flow</span><h3>Make request status clear</h3><p>The EmailJS integration includes validation, a pending state, success feedback, and an error message with an email fallback. The form asks visitors to save medical details for their therapist.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-reflection shell" aria-labelledby="result-title">
+      <p class="section-index">04 / THE RESULT</p>
+      <div class="case-section-body">
+        <h2 id="result-title">A complete business website.</h2>
+        <p class="case-lede">Service information and a practical contact flow come together in a responsive design.</p>
+        <p>
+          Built with HTML, CSS, and JavaScript, the website introduces the practice and guides visitors toward a conversation.
+        </p>
+        <div class="case-actions">
+          <a class="button button-primary" href="/#contact">Discuss your website <span>→</span></a>
+          <a class="text-link" href="/#work">Explore more work <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
