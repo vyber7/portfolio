@@ -51,7 +51,7 @@ section[id] { scroll-margin-top: 100px; }
 .employer-intro { width: calc(65% - 1.3rem); margin-left: auto; }
 .employer-intro > p { color: var(--muted); font-size: 1.1rem; }
 .employer-intro .actions { align-items: center; gap: 1.5rem; }
-.button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .7rem 1rem; border: 1px solid var(--line-strong); font: 700 .78rem var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .04em; transition: .2s ease; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: .65rem; min-height: 48px; padding: .7rem 1rem; border: 1px solid var(--line-strong); font: 700 .78rem var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .04em; transition: .2s ease; }
 .button-primary { border-color: var(--orange); background: var(--orange); color: var(--ink); }
 .button:hover { transform: translateY(-2px); border-color: var(--text); }
 .button-quiet:hover { color: var(--orange); border-color: var(--orange); }
