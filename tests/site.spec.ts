@@ -10,14 +10,25 @@ for (const path of ["/", "/projects/bidlane/"]) {
     for (const image of await page.locator("img").all()) {
       await image.scrollIntoViewIfNeeded();
       await expect(image).toHaveJSProperty("complete", true);
-      expect(await image.evaluate((element) => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+      expect(
+        await image.evaluate(
+          (element) => (element as HTMLImageElement).naturalWidth,
+        ),
+      ).toBeGreaterThan(0);
     }
-    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth - window.innerWidth,
+      ),
+    ).toBeLessThanOrEqual(1);
     expect(errors).toEqual([]);
   });
 }
 
-test("case study and available primary navigation reach their destinations", async ({ page, isMobile }) => {
+test("case study and available primary navigation reach their destinations", async ({
+  page,
+  isMobile,
+}) => {
   await page.goto("/");
   await page.getByRole("link", { name: "Read the BidLane case study" }).click();
   await expect(page).toHaveURL(/\/projects\/bidlane\/$/);
@@ -28,10 +39,15 @@ test("case study and available primary navigation reach their destinations", asy
   await expect(page).toHaveURL(/\/#employers$/);
   await expect(page.getByRole("link", { name: "View résumé" })).toBeVisible();
   await page.getByRole("link", { name: "Vitaliy Bernatskyy, home" }).click();
-  await page.getByRole("link", { name: "Discuss your project", exact: true }).click();
+  await page
+    .getByRole("link", { name: "Discuss your project", exact: true })
+    .click();
   await expect(page).toHaveURL(/\/#contact$/);
   await expect(page.locator("#contact")).toBeInViewport();
-  const navigation = page.getByRole("navigation", { name: "Primary navigation", includeHidden: true });
+  const navigation = page.getByRole("navigation", {
+    name: "Primary navigation",
+    includeHidden: true,
+  });
   if (isMobile) {
     // The current mobile design hides the header navigation.
     await expect(navigation).toBeHidden();

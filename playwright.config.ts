@@ -13,11 +13,16 @@ export default defineConfig({
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     serviceWorkers: "block",
-    launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH },
+    launchOptions: {
+      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
+    },
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },
-    { name: "mobile", use: { ...devices["Pixel 7"], viewport: { width: 375, height: 812 } } },
+    {
+      name: "mobile",
+      use: { ...devices["Pixel 7"], viewport: { width: 375, height: 812 } },
+    },
   ],
   webServer: {
     command: "npm run build && node tests/preview.mjs",
