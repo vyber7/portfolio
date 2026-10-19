@@ -262,7 +262,6 @@ section[id] {
   max-height: 510px;
   object-fit: cover;
   object-position: center 30%;
-  filter: saturate(0.78) contrast(1.06);
 }
 .portrait-meta {
   display: flex;
