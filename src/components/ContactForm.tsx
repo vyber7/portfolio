@@ -15,8 +15,8 @@ export default function ContactForm() {
     setStatus("sending");
     try {
       await emailjs.sendForm(
-        "service_i35xu0a",
-        "template_sttnubf",
+        "service_851fca6",
+        "template_57sq7w6",
         form.current,
         "QHlpLI6ej3-odnxSz",
       );
