@@ -56,7 +56,7 @@ for (const invalid of [
   });
 }
 
-test("sends entered details once, then shows success and clears the form", async ({
+test("shows confirmation after sending and lets the visitor send another message", async ({
   page,
 }) => {
   const requests: Route[] = [];
@@ -65,6 +65,7 @@ test("sends entered details once, then shows success and clears the form", async
     requests.push(route);
   });
   await fillForm(page);
+  const initialHeight = (await page.locator(".contact-form-slot").boundingBox())!.height;
   await page.getByRole("button", { name: "Send message" }).click();
   const sending = page.getByRole("button", { name: "Sending…" });
   await expect(sending).toBeDisabled();
@@ -84,9 +85,21 @@ test("sends entered details once, then shows success and clears the form", async
     contentType: "text/plain",
     body: "OK",
   });
-  await expect(page.locator("[aria-live='polite']")).toContainText(
-    "Message sent.",
-  );
+  const confirmation = page.getByRole("heading", { name: "Message sent.", exact: true });
+  await expect(confirmation).toBeVisible();
+  await expect(confirmation).toBeFocused();
+  await expect(page.getByText("Thanks for reaching out! I’ll read your message and get back to you soon.")).toBeVisible();
+  await expect(page.getByLabel("Name", { exact: true })).toBeHidden();
+  await expect(page.getByRole("button", { name: "Send message", exact: true })).toHaveCount(0);
+  expect((await page.locator(".contact-form-slot").boundingBox())!.height).toBeCloseTo(initialHeight, 0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
+  await page.keyboard.press("Tab");
+  const anotherMessage = page.getByRole("button", { name: "Send another message" });
+  await expect(anotherMessage).toBeFocused();
+  expect(requests).toHaveLength(1);
+  await anotherMessage.click();
+  await expect(confirmation).toHaveCount(0);
+  await expect(page.getByLabel("Name", { exact: true })).toBeFocused();
   await expect(
     page.getByRole("button", { name: "Send message" }),
   ).toBeEnabled();
@@ -94,6 +107,14 @@ test("sends entered details once, then shows success and clears the form", async
     await expect(page.getByLabel(label, { exact: true })).toHaveValue("");
   }
   expect(requests).toHaveLength(1);
+  await expect(page.locator("[aria-live='polite']")).toBeEmpty();
+  await fillForm(page);
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  await expect.poll(() => requests.length).toBe(2);
+  await requests[1].fulfill({ status: 200, body: "OK" });
+  await expect(confirmation).toBeVisible();
+  await expect(confirmation).toBeFocused();
+  expect(requests).toHaveLength(2);
 });
 
 test("keeps entered details on failure and allows a successful retry", async ({
@@ -120,8 +141,6 @@ test("keeps entered details on failure and allows a successful retry", async ({
   );
   await expect(page.getByLabel("How can I help?")).toHaveValue(details.message);
   await page.getByRole("button", { name: "Send message" }).click();
-  await expect(page.locator("[aria-live='polite']")).toContainText(
-    "Message sent.",
-  );
+  await expect(page.getByRole("heading", { name: "Message sent.", exact: true })).toBeVisible();
   expect(attempts).toBe(2);
 });

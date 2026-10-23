@@ -580,10 +580,67 @@ section[id] {
   font: 700 0.75rem var(--mono);
   text-transform: uppercase;
 }
+.contact-form-slot {
+  display: grid;
+  min-width: 0;
+}
+.contact-form,
+.contact-confirmation {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+.contact-form.is-sent {
+  visibility: hidden;
+}
+.contact-confirmation {
+  align-self: start;
+  padding-top: 1.875rem;
+  border-top: 1px solid rgba(7, 16, 17, 0.4);
+  animation: confirmation-appear 240ms ease-out;
+}
+.confirmation-check {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.75rem;
+  border: 1px solid currentColor;
+  font-size: 1.65rem;
+}
+.contact-confirmation h3 {
+  margin-bottom: 1.125rem;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+.contact-confirmation h3:focus {
+  outline: none;
+}
+.contact-confirmation p {
+  max-width: 390px;
+  margin-bottom: 1.875rem;
+  font-size: 1.0625rem;
+}
+.contact-confirmation .button {
+  border-color: currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.contact-confirmation .button:hover {
+  background: rgba(7, 16, 17, 0.06);
+}
+.contact-confirmation .button:focus-visible {
+  outline-color: var(--ink);
+}
+@keyframes confirmation-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 .form-row {
   display: grid;
@@ -951,5 +1008,6 @@ section[id] {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
