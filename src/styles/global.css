@@ -207,10 +207,6 @@ section[id] {
   margin: 2rem 0 0;
   color: var(--muted);
 }
-.employer-intro {
-  width: calc(65% - 1.3rem);
-  margin-left: auto;
-}
 .employer-intro > p {
   color: var(--muted);
   font-size: 1.1rem;
@@ -439,10 +435,21 @@ section[id] {
   border-block: 1px solid var(--line);
   background: var(--ink-2);
 }
-.about-grid {
+.about-grid,
+.employer-grid {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
   gap: 2rem;
+}
+.employer-heading {
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  column-gap: 2rem;
+  align-items: start;
+  margin-bottom: 0;
+}
+.employer-intro {
+  grid-column: 2;
 }
 .about-heading {
   display: block;
@@ -488,11 +495,6 @@ section[id] {
 }
 .experience-section {
   padding-block: 9rem;
-}
-.experience-section .section-heading {
-  grid-template-columns: 0.7fr 1.3fr;
-  column-gap: 2rem;
-  align-items: start;
 }
 .experience-entry {
   display: grid;
@@ -890,13 +892,6 @@ section[id] {
   .feature-card {
     grid-template-columns: 1fr;
   }
-  .experience-section .section-heading {
-    grid-template-columns: 1fr;
-  }
-  .employer-intro {
-    width: 100%;
-    margin-left: 0;
-  }
   .feature-image {
     grid-column: auto;
     min-height: 330px;
@@ -908,11 +903,18 @@ section[id] {
     grid-template-columns: 1fr;
   }
   .about-grid,
+  .employer-grid,
   .experience-entry,
   .credentials-row,
   .contact-grid,
   .case-section {
     grid-template-columns: 1fr;
+  }
+  .employer-heading {
+    grid-template-columns: 1fr;
+  }
+  .employer-intro {
+    grid-column: auto;
   }
   .about-heading {
     padding-right: 0;
